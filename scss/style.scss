@@ -1,0 +1,137 @@
+body {
+	background: #e4e4e4;
+}
+
+.header {
+	background: no-repeat url('../imgs/banner.jpg') 50%/100%;
+	position: relative;
+
+	&:after {
+		content: "";
+		background-color: rgba(16,135,133,0.75);
+		top: 0;
+	  	left: 0;
+	  	bottom: 0;
+	  	right: 0;
+	  	display: block;
+	  	position: absolute;
+	}
+
+	#banner {
+		vertical-align: top;
+		width: 100%;
+		opacity: 0;
+	}
+
+	.wrapper {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		padding: 60px 105px;
+		height: 100%;
+		z-index: 1;
+	}
+
+	.nav-bar {
+		display: inline-block;
+		width: 100%;
+		.logo {
+			height: 57px;
+			float: left;
+		}
+		.nav-links {
+			float: right;
+			list-style: none;
+			line-height: 57px;
+			li {
+				display: inline;
+				padding: 0 20px;
+				a {
+					color: white;
+					font-size: 21px;
+				}
+				#join {
+					color: #ffd44c;
+					border: 2px solid #ffd44c;
+					border-radius: 15px;
+					padding: 10px 20px;
+					margin-left: 100px;
+				}						
+			}
+		}
+	}
+
+	.content {
+		text-align: center;
+		padding-top: 250px;
+		color: #fff;
+		h1 {
+			font-size: 62px;
+		}
+		h3 {
+			margin-top: 80px;
+			font-size: 21px;
+		}
+		.btn-yellow {
+			margin: 80px 0;
+		}
+		#down-arrow {
+			display: block;
+			img {
+				width: 31px;
+			}
+		}
+	}
+}
+.btn-yellow {
+	color: white;
+	background: #e9c046;
+	padding: 20px;
+	border-radius: 20px;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 17px;
+}
+
+.retirement {
+	display:flex;
+	img {
+		flex: 1;
+	}
+	.right-section {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.security {
+	position: relative;
+	img {
+		width: 100%;
+	}
+
+	.description {
+		position: absolute;
+		top: 120px;
+		h2, p {
+			color: #fff;
+		}
+	}
+}
+
+.description {
+	padding: 0 120px;
+	h2{
+		font-size: 43px;
+		color: #4d4d4d;
+	}
+	p {
+		margin: 40px 0 30px;
+		font-size: 18px;
+		color: #666666;
+	}
+}
+

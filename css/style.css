@@ -1,0 +1,103 @@
+body {
+  background: #e4e4e4; }
+
+.header {
+  background: no-repeat url("../imgs/banner.jpg") 50%/100%;
+  position: relative; }
+  .header:after {
+    content: "";
+    background-color: rgba(16, 135, 133, 0.75);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    position: absolute; }
+  .header #banner {
+    vertical-align: top;
+    width: 100%;
+    opacity: 0; }
+  .header .wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 60px 105px;
+    height: 100%;
+    z-index: 1; }
+  .header .nav-bar {
+    display: inline-block;
+    width: 100%; }
+    .header .nav-bar .logo {
+      height: 57px;
+      float: left; }
+    .header .nav-bar .nav-links {
+      float: right;
+      list-style: none;
+      line-height: 57px; }
+      .header .nav-bar .nav-links li {
+        display: inline;
+        padding: 0 20px; }
+        .header .nav-bar .nav-links li a {
+          color: white;
+          font-size: 21px; }
+        .header .nav-bar .nav-links li #join {
+          color: #ffd44c;
+          border: 2px solid #ffd44c;
+          border-radius: 15px;
+          padding: 10px 20px;
+          margin-left: 100px; }
+  .header .content {
+    text-align: center;
+    padding-top: 250px;
+    color: #fff; }
+    .header .content h1 {
+      font-size: 62px; }
+    .header .content h3 {
+      margin-top: 80px;
+      font-size: 21px; }
+    .header .content .btn-yellow {
+      margin: 80px 0; }
+    .header .content #down-arrow {
+      display: block; }
+      .header .content #down-arrow img {
+        width: 31px; }
+
+.btn-yellow {
+  color: white;
+  background: #e9c046;
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 17px; }
+
+.retirement {
+  display: flex; }
+  .retirement img {
+    flex: 1; }
+  .retirement .right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+.security {
+  position: relative; }
+  .security img {
+    width: 100%; }
+  .security .description {
+    position: absolute;
+    top: 120px; }
+    .security .description h2, .security .description p {
+      color: #fff; }
+
+.description {
+  padding: 0 120px; }
+  .description h2 {
+    font-size: 43px;
+    color: #4d4d4d; }
+  .description p {
+    margin: 40px 0 30px;
+    font-size: 18px;
+    color: #666666; }
