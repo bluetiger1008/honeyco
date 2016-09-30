@@ -1,0 +1,4 @@
+# honeyco
+
+# Deploy
+bower install
