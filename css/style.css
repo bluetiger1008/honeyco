@@ -76,11 +76,12 @@ body {
   display: flex; }
   .retirement img {
     flex: 1; }
-  .retirement .right-section {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+
+.sub-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .security {
   position: relative; }
@@ -101,3 +102,94 @@ body {
     margin: 40px 0 30px;
     font-size: 18px;
     color: #666666; }
+
+.gallery .wrapper {
+  padding: 145px 105px;
+  text-align: center; }
+  .gallery .wrapper h2 {
+    margin-bottom: 95px;
+    color: #4d4d4d; }
+  .gallery .wrapper p {
+    margin: 39px 0 67px;
+    color: #666666; }
+  .gallery .wrapper .carousel .carousel-inner {
+    width: 80%;
+    margin: auto; }
+  .gallery .wrapper .carousel .carousel-control {
+    background: none; }
+    .gallery .wrapper .carousel .carousel-control img {
+      position: absolute;
+      top: 50%;
+      width: 65px; }
+    .gallery .wrapper .carousel .carousel-control.left {
+      text-align: left; }
+      .gallery .wrapper .carousel .carousel-control.left img {
+        transform: translate(0, -50%); }
+    .gallery .wrapper .carousel .carousel-control.right {
+      text-align: right; }
+      .gallery .wrapper .carousel .carousel-control.right img {
+        transform: translate(-100%, -50%); }
+
+.community {
+  display: flex; }
+  .community img {
+    flex: 1; }
+  .community .sub-section {
+    background: #bf4931; }
+    .community .sub-section h2, .community .sub-section p {
+      color: #fff; }
+
+.connect {
+  text-align: center;
+  padding: 148px 0;
+  color: #4d4d4d; }
+  .connect h3 {
+    font-size: 29px; }
+  .connect p {
+    margin: 28px 0 48px;
+    font-size: 21px; }
+  .connect .input-group {
+    margin: 20px auto;
+    width: 620px; }
+  .connect input {
+    float: left; }
+    .connect input.btn.btn-lg, .connect input.btn.btn-lg:focus {
+      outline: none;
+      width: 75%;
+      height: 50px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+  .connect button.btn {
+    width: 25%;
+    height: 50px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #e9c046;
+    color: white;
+    text-transform: uppercase; }
+  .connect .promise {
+    color: #999; }
+
+.footer {
+  background: #fff;
+  position: relative; }
+  .footer .bg-logo {
+    width: 143px;
+    position: absolute;
+    transform: translate(0, calc(-50%));
+    margin: 0 105px; }
+  .footer .wrapper {
+    padding: 80px 105px 160px; }
+    .footer .wrapper ul {
+      list-style: none; }
+      .footer .wrapper ul a {
+        color: #559897;
+        font-size: 18px; }
+        .footer .wrapper ul a i {
+          padding: 0 10px; }
+  .footer .copyright {
+    background: #f2f2f2;
+    padding: 37px 0;
+    text-align: center;
+    color: #808080;
+    font-size: 14px; }
