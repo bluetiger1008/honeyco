@@ -1,5 +1,5 @@
 node_modules/
-bower_components/
-css/
+src/bower_components/
+src/css/
 .sass-cache/
 .gulp-scss-cache/

@@ -15,14 +15,12 @@ $copyrightTextColor: #808080;
 
 body {
 	background: $bodyBackground;
-	font-family: 'Gotham';
+	font-family: 'Gotham' , sans-serif;
 }
-
-
 
 a {
 	text-decoration: none !important;
-	font-family: 'Gotham';
+	font-family: 'Gotham', sans-serif;
 	font-weight: lighter;
 }
 
@@ -31,7 +29,7 @@ h1, h2, h3 {
 }
 
 .header {
-	background: no-repeat url('../imgs/banner.jpg') 50%/100%;
+	background: no-repeat url('../images/banner.jpg') 50%/100%;
 	position: relative;
 
 	&:after {

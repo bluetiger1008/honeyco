@@ -5,18 +5,18 @@ var scss = require('gulp-scss');
  
 
 var paths = {
-  scss: ['./scss/*.scss']
+  scss: ['./src/styles/*.scss']
 };
 
 gulp.task('default', ['scss', 'watch']);
 
 
 gulp.task('scss', function(done) {
-  gulp.src(['./scss/style.scss'])
+  gulp.src(['./src/styles/style.scss'])
     .pipe(scss({
       
     }))
-    .pipe(gulp.dest('./css/'))
+    .pipe(gulp.dest('./src/css/'))
     .on('end', done);
 });
 gulp.task('watch', function() {
