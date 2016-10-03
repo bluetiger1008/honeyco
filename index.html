@@ -21,18 +21,19 @@
   </head>
   <body>
     <div class="header">
+      <div class="nav-bar">
+        <img class="logo" src="imgs/logo.png">
+        <ul class="nav-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Your Home</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Technology</a></li>
+          <li><a id="join" href="#">Join</a></li>
+        </ul>
+      </div>
       <img id="banner" src="imgs/banner.jpg">
       <div class="wrapper">
-        <div class="nav-bar">
-          <img class="logo" src="imgs/logo.png">
-          <ul class="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Your Home</a></li>
-            <li><a href="#">Community</a></li>
-            <li><a href="#">Technology</a></li>
-            <li><a id="join" href="#">Join</a></li>
-          </ul>
-        </div>
+        
         <div class="content">
           <h1>Connected living for <br> a booming population.</h1>
           <h3>Powered by technology and community, <br> welcome to the new retirement. <br> This is living on your terms</h2>
@@ -45,11 +46,13 @@
     </div>
 
     <div class="retirement">
-      <img src="imgs/retirement.jpg">
+      <div class="section-image">
+        <img src="imgs/retirement.jpg">
+      </div>
       <div class="sub-section">
         <div class="description">
           <h2>A better residential <br> retirement model.</h2>
-          <p>HoneyCo Homes is rethinking the traditional retirement living model. By harnessing with the community, you now have access to the world's first distributed retirement community.</p>
+          <p>HoneyCo Homes is rethinking the traditional retirement living model. By harnessing the lastest in technology and engaging with the community, you now have access to the world's first distributed retirement community.</p>
           <a href="#" class="btn-yellow">Watch Video</a>
         </div>
       </div>
@@ -84,7 +87,7 @@
           </a>
         </div>
         <p>Can't remember if you turned off the stove? Is the door locked? <br>
-        No worries. With a HoneyCo Home, peace of mind is always at hand.</p>
+        <span class="light">No worries. With a HoneyCo Home, peace of mind is always at hand.</span></p>
         <a href="#" class="btn-yellow">Learn More</a>
       </div>
     </div>
@@ -97,7 +100,9 @@
           <a href="#" class="btn-yellow">Learn More</a>
         </div>
       </div>
-      <img src="imgs/community.jpg">
+      <div class="section-image">
+        <img src="imgs/community.jpg">
+      </div>
     </div>
 
     <div class="connect">
@@ -117,16 +122,16 @@
         <div class="col-lg-offset-6 col-lg-6">
           <div class="col-lg-4">
             <ul>
-              <li><a>Contact</a></li>
-              <li><a>FAQ</a></li>
-              <li><a>Join</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Join</a></li>
             </ul>
           </div>
           <div class="col-lg-4">
             <ul>
-              <li><a><i class="fa fa-facebook-official"></i>Facebook</a></li>
-              <li><a><i class="fa fa-instagram"></i>Instagram</a></li>
-              <li><a><i class="fa fa-twitter"></i>Twitter</a></li>
+              <li><a href=""><i class="fa fa-facebook-official"></i>Facebook</a></li>
+              <li><a href=""><i class="fa fa-instagram"></i>Instagram</a></li>
+              <li><a href=""><i class="fa fa-twitter"></i>Twitter</a></li>
             </ul>
           </div>
         </div>
@@ -140,6 +145,21 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+      $(document).ready(function() {
+  
+        $(window).scroll(function () {
+            //if you hard code, then use console
+            //.log to determine when you want the 
+            //nav bar to stick.  
+            console.log($(window).scrollTop())
+          if ($(window).scrollTop() > 130) {
+            $('.nav-bar').addClass('navbar-fixed');
+          }
+          if ($(window).scrollTop() < 131) {
+            $('.nav-bar').removeClass('navbar-fixed');
+          }
+        });
+      });
       $('.carousel').carousel({
           interval: false
       }); 
