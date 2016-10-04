@@ -16,7 +16,7 @@ a {
 h1, h2, h3 {
   line-height: 1.2; }
 
-h2 {
+h3 {
   font-size: 35px; }
 
 .header {
@@ -49,7 +49,7 @@ h2 {
       padding: 315px 0 106px; }
       .header .wrapper .content h1 {
         font-size: 50px; }
-      .header .wrapper .content h3 {
+      .header .wrapper .content h2 {
         margin-top: 62px;
         font-size: 18px; }
       .header .wrapper .content .btn-yellow {
@@ -130,12 +130,12 @@ h2 {
   .security .description {
     position: absolute;
     top: 98px; }
-    .security .description h2, .security .description p {
+    .security .description h3, .security .description p {
       color: #fff; }
 
 .description {
   padding: 0 90px; }
-  .description h2 {
+  .description h3 {
     color: #4d4d4d; }
   .description p {
     margin: 22px 0 55px;
@@ -145,7 +145,7 @@ h2 {
 .gallery .wrapper {
   padding: 145px 150px;
   text-align: center; }
-  .gallery .wrapper h2 {
+  .gallery .wrapper h3 {
     margin-bottom: 95px;
     color: #4d4d4d; }
   .gallery .wrapper p {
@@ -177,7 +177,7 @@ h2 {
   display: flex; }
   .community .sub-section {
     background: #bf4931; }
-    .community .sub-section h2, .community .sub-section p {
+    .community .sub-section h3, .community .sub-section p {
       color: #fff; }
 
 .connect {
@@ -200,7 +200,7 @@ h2 {
     /* Firefox 18- */
     color: #666666;
     font-size: 20px; }
-  .connect h3 {
+  .connect h4 {
     font-size: 24px;
     font-weight: bold; }
   .connect p {
@@ -280,7 +280,7 @@ h2 {
     .header .wrapper .content {
       padding: 250px 0 80px; }
 
-  h2 {
+  h3 {
     font-size: 25px; }
 
   .description {
@@ -292,7 +292,7 @@ h2 {
   .gallery .wrapper {
     padding: 50px;
     padding: 20px; }
-    .gallery .wrapper h2 {
+    .gallery .wrapper h3 {
       margin-bottom: 30px; }
     .gallery .wrapper p {
       margin: 20px 0 40px;
@@ -309,7 +309,7 @@ h2 {
     .connect p {
       margin: 20px 0 40px;
       font-size: 15px; }
-    .connect h3 {
+    .connect h4 {
       font-size: 18px; }
     .connect ::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
@@ -350,7 +350,7 @@ h2 {
           display: none; }
         .header .wrapper .content h1 {
           font-size: 35px; }
-        .header .wrapper .content h3 {
+        .header .wrapper .content h2 {
           margin-top: 25px;
           font-size: 15px; }
         .header .wrapper .content .btn-yellow {
@@ -375,7 +375,7 @@ h2 {
     padding: 20px;
     text-align: center; }
 
-  .gallery .wrapper h2 {
+  .gallery .wrapper h3 {
     margin-bottom: 50px; }
   .gallery .wrapper p {
     margin: 20px 30px; }
