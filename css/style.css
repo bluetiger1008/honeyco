@@ -36,7 +36,7 @@ h1, h2, h3 {
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 60px 120px;
+    padding: 0 90px;
     height: 100%;
     z-index: 1; }
   .header .nav-bar {
@@ -44,21 +44,21 @@ h1, h2, h3 {
     transition: all 0.5s ease;
     width: 100%;
     position: fixed;
-    padding: 60px 120px;
+    padding: 54px 90px;
     z-index: 100; }
     .header .nav-bar .logo {
-      height: 57px;
+      height: 47px;
       float: left; }
     .header .nav-bar .nav-links {
       float: right;
       list-style: none;
-      line-height: 57px; }
+      line-height: 47px; }
       .header .nav-bar .nav-links li {
         display: inline;
         padding: 0 20px; }
         .header .nav-bar .nav-links li a {
           color: #fff;
-          font-size: 23px; }
+          font-size: 18px; }
         .header .nav-bar .nav-links li #join {
           color: #e9c046;
           border: 2px solid #e9c046;
@@ -73,19 +73,19 @@ h1, h2, h3 {
     width: 100%; }
   .header .content {
     text-align: center;
-    padding-top: 250px;
+    padding-top: 315px;
     color: #fff; }
     .header .content h1 {
-      font-size: 62px; }
+      font-size: 50px; }
     .header .content h3 {
-      margin-top: 80px;
-      font-size: 23px; }
+      margin-top: 62px;
+      font-size: 18px; }
     .header .content .btn-yellow {
       margin: 80px 0; }
     .header .content #down-arrow {
       display: block; }
       .header .content #down-arrow img {
-        width: 31px; }
+        width: 26px; }
 
 .btn-yellow {
   color: #fff;
@@ -94,7 +94,7 @@ h1, h2, h3 {
   border-radius: 20px;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 19px;
+  font-size: 14px;
   letter-spacing: 1px;
   font-weight: bold; }
 
@@ -125,18 +125,18 @@ h1, h2, h3 {
     width: 100%; }
   .security .description {
     position: absolute;
-    top: 120px; }
+    top: 98px; }
     .security .description h2, .security .description p {
       color: #fff; }
 
 .description {
-  padding: 0 120px; }
+  padding: 0 90px; }
   .description h2 {
-    font-size: 43px;
+    font-size: 35px;
     color: #4d4d4d; }
   .description p {
-    margin: 40px 0 30px;
-    font-size: 22px;
+    margin: 22px 0 55px;
+    font-size: 15px;
     color: #666666; }
 
 .gallery .wrapper {
@@ -145,11 +145,11 @@ h1, h2, h3 {
   .gallery .wrapper h2 {
     margin-bottom: 95px;
     color: #4d4d4d;
-    font-size: 45px; }
+    font-size: 35px; }
   .gallery .wrapper p {
     margin: 39px 0 67px;
     color: #666666;
-    font-size: 22px; }
+    font-size: 18px; }
     .gallery .wrapper p .light {
       color: #4d4d4d; }
   .gallery .wrapper .carousel .carousel-inner {
@@ -160,7 +160,7 @@ h1, h2, h3 {
     .gallery .wrapper .carousel .carousel-control img {
       position: absolute;
       top: 50%;
-      width: 65px; }
+      width: 55px; }
     .gallery .wrapper .carousel .carousel-control.left {
       text-align: left; }
       .gallery .wrapper .carousel .carousel-control.left img {
@@ -180,7 +180,7 @@ h1, h2, h3 {
 
 .connect {
   text-align: center;
-  padding: 148px 0;
+  padding: 120px 0;
   color: #4d4d4d; }
   .connect ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
@@ -199,11 +199,11 @@ h1, h2, h3 {
     color: #666666;
     font-size: 20px; }
   .connect h3 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold; }
   .connect p {
-    margin: 28px 0 48px;
-    font-size: 23px; }
+    margin: 29px 0 55px;
+    font-size: 18px; }
   .connect .input-group {
     margin: 20px auto;
     width: 515px; }
@@ -238,26 +238,26 @@ h1, h2, h3 {
     width: 143px;
     position: absolute;
     transform: translate(0, calc(-50%));
-    margin: 0 120px; }
+    margin: 0 90px; }
   .footer .wrapper {
     display: inline-block;
     width: 100%;
-    padding: 80px 120px 160px; }
+    padding: 60px 90px 136px; }
     .footer .wrapper ul {
       list-style: none;
       padding: 0; }
       .footer .wrapper ul a {
         color: #559897;
-        font-size: 20px;
+        font-size: 15px;
         line-height: 2; }
         .footer .wrapper ul a i {
           padding: 0 10px; }
   .footer .copyright {
     background: #f2f2f2;
-    padding: 37px 0;
+    padding: 30px 0;
     text-align: center;
     color: #808080;
-    font-size: 14px; }
+    font-size: 12px; }
 
 .section-image {
   flex: 1;

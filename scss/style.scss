@@ -1,6 +1,6 @@
 @import "font";
 
-$mediumFontSize: 23px;
+$mediumFontSize: 18px;
 
 $bodyBackground: #e4e4e4;
 $white: #fff;
@@ -17,8 +17,6 @@ body {
 	background: $bodyBackground;
 	font-family: 'Gotham';
 }
-
-
 
 a {
 	text-decoration: none !important;
@@ -55,7 +53,7 @@ h1, h2, h3 {
 		position: absolute;
 		top: 0;
 		width: 100%;
-		padding: 60px 120px;
+		padding: 0 90px;
 		height: 100%;
 		z-index: 1;
 	}
@@ -65,18 +63,18 @@ h1, h2, h3 {
 		transition: all 0.5s ease;
 		width: 100%;
 		position: fixed;
-		padding: 60px 120px;
+		padding: 54px 90px;
 		z-index: 100;
 
 		.logo {
-			height: 57px;
+			height: 47px;
 			float: left;
 		}
 
 		.nav-links {
 			float: right;
 			list-style: none;
-			line-height: 57px;
+			line-height: 47px;
 
 			li {
 				display: inline;
@@ -108,15 +106,15 @@ h1, h2, h3 {
 
 	.content {
 		text-align: center;
-		padding-top: 250px;
+		padding-top: 315px;
 		color: $white;
 
 		h1 {
-			font-size: 62px;
+			font-size: 50px;
 		}
 
 		h3 {
-			margin-top: 80px;
+			margin-top: 62px;
 			font-size: $mediumFontSize;
 		}
 
@@ -128,7 +126,7 @@ h1, h2, h3 {
 			display: block;
 
 			img {
-				width: 31px;
+				width: 26px;
 			}
 		}
 	}
@@ -141,7 +139,7 @@ h1, h2, h3 {
 	border-radius: 20px;
 	display: inline-block;
 	text-transform: uppercase;
-	font-size: 19px;
+	font-size: 14px;
 	letter-spacing: 1px;
 	font-weight: bold;
 }
@@ -176,7 +174,7 @@ h1, h2, h3 {
 
 	.description {
 		position: absolute;
-		top: 120px;
+		top: 98px;
 
 		h2, p {
 			color: #fff;
@@ -185,16 +183,16 @@ h1, h2, h3 {
 }
 
 .description {
-	padding: 0 120px;
+	padding: 0 90px;
 
 	h2{
-		font-size: 43px;
+		font-size: 35px;
 		color: $headerTextColor;
 	}
 
 	p {
-		margin: 40px 0 30px;
-		font-size: 22px;
+		margin: 22px 0 55px;
+		font-size: 15px;
 		color: $subTextColor;
 	}
 }
@@ -207,13 +205,13 @@ h1, h2, h3 {
 		h2 {
 			margin-bottom: 95px;
 			color: $headerTextColor;
-			font-size: 45px;
+			font-size: 35px;
 		}
 
 		p {
 			margin:39px 0 67px;
 			color: $subTextColor;
-			font-size: 22px;
+			font-size: $mediumFontSize;
 			.light {
 				color: $subTextLightColor;
 			}
@@ -231,7 +229,7 @@ h1, h2, h3 {
 				img {
 					position: absolute;
 					top: 50%;
-					width: 65px;
+					width: 55px;
 				}
 
 				&.left {
@@ -286,16 +284,16 @@ h1, h2, h3 {
 	}
 
 	text-align: center;
-	padding: 148px 0;
+	padding: 120px 0;
 	color: $headerTextColor;
 
 	h3 {
-		font-size: 32px;
+		font-size: 24px;
 		font-weight: bold;
 	}
 
 	p {
-		margin: 28px 0 48px;
+		margin: 29px 0 55px;
 		font-size: $mediumFontSize;
 	}
 
@@ -347,13 +345,13 @@ h1, h2, h3 {
 		width: 143px;
 		position: absolute;
 		transform: translate(0, calc(-50%));
-		margin: 0 120px;
+		margin: 0 90px;
 	}
 
 	.wrapper {
 		display: inline-block;
 		width: 100%;
-		padding: 80px 120px 160px;
+		padding: 60px 90px 136px;
 
 		ul {
 			list-style: none;
@@ -361,7 +359,7 @@ h1, h2, h3 {
 
 			a {
 				color: $footerTextColor;
-				font-size: 20px;
+				font-size: 15px;
 				line-height: 2;
 
 				i {
@@ -373,10 +371,10 @@ h1, h2, h3 {
 
 	.copyright {
 		background: $copyrightBackColor;
-		padding: 37px 0;
+		padding: 30px 0;
 		text-align: center;
 		color: $copyrightTextColor;
-		font-size: 14px;
+		font-size: 12px;
 	}
 }
 
