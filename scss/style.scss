@@ -147,12 +147,16 @@ h3{
 		position: fixed;
 		padding: 54px $normalGutter;
 		z-index: 100;
-
-		.logo {
-			height: 47px;
-			float: left;
+		.nav-logo {
+			display: inline-block;
+			span {
+				color: white;
+				font-size: 1.2em;
+			}
+			.logo {
+				height: 47px;
+			}
 		}
-
 		.nav-links {
 			float: right;
 			list-style: none;
@@ -174,6 +178,10 @@ h3{
 					padding: 15px 20px;
 				}						
 			}
+		}
+		.menu-link {
+			display: inline-block;
+			float: right;
 		}
 	}
 
@@ -408,7 +416,7 @@ h3{
 	.wrapper {
 		display: inline-block;
 		width: 100%;
-		padding: 60px $normalGutter 136px;
+		padding: 60px $normalGutter 50px;
 
 		ul {
 			list-style: none;
@@ -451,7 +459,7 @@ h3{
 		display: block;
 	}
 	.header {
-		background-size: auto 100%;
+		background-size: auto 130%;
 		.nav-bar {
 			padding: $mobileGutter;
 			.nav-links {
