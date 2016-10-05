@@ -17,11 +17,13 @@ $screen-md:	992px;
 $screen-lg:	1200px;
 
 $normalGutter: 90px;
-$mobileGutter: 20px;
+$mobileGutter: 30px;
 
 $normalHeaderFontsize: 50px;
+$ipadHeaderFontsize: 40px;
 $mobileHeaderFontsize: 35px;
 $normalBodyFontsize: 18px;
+$ipadBodyFontsize: 16px;
 $mobileBodyFontsize: 15px;
 $normalDescFontsize: 15px;
 $mobileDescFontsize: 12px;
@@ -33,6 +35,38 @@ $mobileBtnFontsize: 12px;
 body {
 	background: $bodyBackground;
 	font-family: 'Gotham';
+}
+
+.content {
+	position: relative;
+}
+
+.panel {
+    position: fixed;
+    left: -15.625em; /*left or right and the width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+    z-index: 300;
+    background: $orange;
+   	.nav-links {
+   		padding-top: 30px;
+		list-style: none;
+		line-height: 40px;
+		li {
+			padding: 0 10px;
+			a {
+				color: $white;
+				font-size: $normalBodyFontsize;
+			}
+		}
+	}
+}
+
+.mobileNavigator {
+	line-height: 47px;
+	color: white;
+	font-size: 30px;
+	text-align: right;
+	display: none;
 }
 
 a {
@@ -142,6 +176,7 @@ h3{
 			}
 		}
 	}
+
 
 	.navbar-fixed {
 		padding: 10px $normalGutter;
@@ -378,7 +413,9 @@ h3{
 		ul {
 			list-style: none;
 			padding: 0;
-
+			li {
+				display: inline-block;
+			}
 			a {
 				color: $footerTextColor;
 				font-size: 15px;
@@ -410,6 +447,9 @@ h3{
 }
 
 @media only screen and (max-width : $screen-md) {
+	.mobileNavigator {
+		display: block;
+	}
 	.header {
 		background-size: auto 100%;
 		.nav-bar {
@@ -420,7 +460,17 @@ h3{
 		}
 		.wrapper {
 			.content {
-				padding: 250px 0 80px;
+				padding: 150px 0 80px;
+				h1 {
+					font-size: $mobileHeaderFontsize;
+				}
+				h2 {
+					margin-top: 25px;
+					font-size: $mobileBodyFontsize;
+				}
+				.btn-yellow {
+					margin: 30px;
+				}
 			}
 		}
 	}
@@ -494,6 +544,11 @@ h3{
 		}
 		.wrapper {
 		    padding: 60px 20px;
+		    ul {
+		    	li {
+		    		display: block;
+		    	}
+		    }
 		}
 	}
 	.btn-yellow {
@@ -514,11 +569,11 @@ h3{
 					display: none;
 				}
 				h1 {
-					font-size: $mobileHeaderFontsize;
+					font-size: $ipadHeaderFontsize;
 				}
 				h2 {
 					margin-top: 25px;
-					font-size: $mobileBodyFontsize;
+					font-size: $ipadBodyFontsize;
 				}
 				.btn-yellow {
 					margin: 30px;
@@ -561,6 +616,9 @@ h3{
 		padding: 50px $mobileGutter;
 		.input-group {
 			width: 100%;
+		}
+		.btn-lg {
+			padding: 5px;
 		}
 		
 	}

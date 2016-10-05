@@ -20,147 +20,135 @@
     <![endif]-->
   </head>
   <body>
-    <div class="header">
-      <div class="nav-bar">
-        <img class="logo" src="imgs/logo.png">
-        <ul class="nav-links">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Your Home</a></li>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">Technology</a></li>
-          <li><a id="join" href="#">Join</a></li>
-        </ul>
-      </div>
-      <div class="wrapper">
-        <div class="content">
-          <h1>Connected living for <br> a booming population.</h1>
-          <h2>Powered by technology and community, <br> welcome to the new retirement. <br> This is living on your terms</h2>
-          <a href="#" class="btn-yellow">Discover</a>
-          <a href="#" id="down-arrow">
-            <img src="imgs/down-arrow.png">
+    <nav id="menu" class="panel" role="navigation">
+      <ul class="nav-links">
+        <li><a href="#" class="nav-about">About</a></li>
+        <li><a href="#" class="nav-home">Your Home</a></li>
+        <li><a href="#" class="nav-tech">Technology</a></li>
+        <li><a href="#" class="nav-community">Community</a></li>
+        <li><a id="join" href="#">Join</a></li>
+      </ul>
+    </nav>
+    <div class="content push">
+      <div class="header">
+        <div class="nav-bar">
+          <img class="logo" src="imgs/logo.png">
+          <ul class="nav-links">
+            <li><a href="#" class="nav-about">About</a></li>
+            <li><a href="#" class="nav-home">Your Home</a></li>
+            <li><a href="#" class="nav-tech">Technology</a></li>
+            <li><a href="#" class="nav-community">Community</a></li>
+            <li><a id="join" href="#">Join</a></li>
+          </ul>
+          <a href="#menu" class="menu-link">
+            <div class="mobileNavigator">&#9776;</div>
           </a>
         </div>
-      </div>
-    </div>
 
-    <div class="retirement">
-      <div class="section-image">
-        <img src="imgs/retirement.jpg">
-      </div>
-      <div class="sub-section">
-        <div class="description">
-          <h3>A better residential <br> retirement model.</h3>
-          <p>HoneyCo Homes is rethinking the traditional retirement living model. By harnessing the lastest in technology and engaging with the community, you now have access to the world's first distributed retirement community.</p>
-          <a href="#" class="btn-yellow">Watch Video</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="security">
-      <img src="imgs/security.jpg">
-      <div class="description col-xs-12 col-sm-6">
-        <h3>Security and safety. <br> In your home.</h3>
-        <p>Whether it's where you raised your kids or a new adventure entirely, enjoy your home on your terms. Affordable and accessible options.</p>
-        <a href="#" class="btn-yellow">Learn More</a>
-      </div>
-    </div>
-
-    <div class="gallery">
-      <div class="wrapper">
-        <h3>A smart home, at your fingertips.</h3>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <img src="imgs/gallery.png">
-            </div>
-            <div class="item">
-              <img src="imgs/gallery.png">
-            </div>
+        <div class="wrapper">
+          <div class="content">
+            <h1>Connected living for <br> a booming population.</h1>
+            <h2>Powered by technology and community, <br> welcome to the new retirement. <br> This is living on your terms</h2>
+            <a href="#" class="btn-yellow">Discover</a>
+            <a href="#" id="down-arrow">
+              <img src="imgs/down-arrow.png">
+            </a>
           </div>
-          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <img src="imgs/left-arrow.png">
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <img src="imgs/right-arrow.png">
-          </a>
         </div>
-        <p>Can't remember if you turned off the stove? Is the door locked? <br>
-        <span class="light">No worries. With a HoneyCo Home, peace of mind is always at hand.</span></p>
-        <a href="#" class="btn-yellow">Learn More</a>
       </div>
-    </div>
 
-    <div class="community">
-      <div class="sub-section">
-        <div class="description">
-          <h3>A grassroots community at your doorstep.</h3>
-          <p>Your in-person community ambassador will help keep you connected with the people, events and opportunities around you.</p>
+      <div class="retirement">
+        <div class="section-image">
+          <img src="imgs/retirement.jpg">
+        </div>
+        <div class="sub-section">
+          <div class="description">
+            <h3>A better residential <br> retirement model.</h3>
+            <p>HoneyCo Homes is rethinking the traditional retirement living model. By harnessing the lastest in technology and engaging with the community, you now have access to the world's first distributed retirement community.</p>
+            <a href="#" class="btn-yellow">Watch Video</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="security">
+        <img src="imgs/security.jpg">
+        <div class="description col-xs-12 col-sm-6">
+          <h3>Security and safety. <br> In your home.</h3>
+          <p>Whether it's where you raised your kids or a new adventure entirely, enjoy your home on your terms. Affordable and accessible options.</p>
           <a href="#" class="btn-yellow">Learn More</a>
         </div>
       </div>
-      <div class="section-image">
-        <img src="imgs/community.jpg">
-      </div>
-    </div>
 
-    <div class="connect">
-      <h4>Get Connected. Stay Connected.</h4>
-      <p>Sign up to receive updates from HoneyCo and apply for early access</p>
-      <form action="#">
-        <div class="input-group">
-           <input class="btn btn-lg" name="email" id="email" type="email" placeholder="Enter your email for updates" required>
-           <button class="btn btn-lg" type="submit">Submit</button>
-        </div>
-       </form>
-    </div>
-
-    <div class="footer">
-      <img class="bg-logo" src="imgs/bg-logo.png">
-      <div class="wrapper">
-        <div class="col-md-offset-6 col-md-6 col-xs-12">
-          <div class="col-sm-offset-4 col-sm-4 col-md-4 col-xs-6">
-            <ul>
-              <li><a href="">Contact</a></li>
-              <li><a href="">FAQ</a></li>
-              <li><a href="">Join</a></li>
-            </ul>
+      <div class="gallery">
+        <div class="wrapper">
+          <h3>A smart home, at your fingertips.</h3>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="imgs/gallery.png">
+              </div>
+              <div class="item">
+                <img src="imgs/gallery.png">
+              </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <img src="imgs/left-arrow.png">
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <img src="imgs/right-arrow.png">
+            </a>
           </div>
-          <div class="col-sm-4 col-md-4 col-xs-6">
-            <ul>
+          <p>Can't remember if you turned off the stove? Is the door locked? <br>
+          <span class="light">No worries. With a HoneyCo Home, peace of mind is always at hand.</span></p>
+          <a href="#" class="btn-yellow">Learn More</a>
+        </div>
+      </div>
+
+      <div class="community">
+        <div class="sub-section">
+          <div class="description">
+            <h3>A grassroots community at your doorstep.</h3>
+            <p>Your in-person community ambassador will help keep you connected with the people, events and opportunities around you.</p>
+            <a href="#" class="btn-yellow">Learn More</a>
+          </div>
+        </div>
+        <div class="section-image">
+          <img src="imgs/community.jpg">
+        </div>
+      </div>
+
+      <div class="connect">
+        <h4>Get Connected. Stay Connected.</h4>
+        <p>Sign up to receive updates from HoneyCo and apply for early access</p>
+        <form action="#">
+          <div class="input-group">
+             <input class="btn btn-lg" name="email" id="email" type="email" placeholder="Enter your email for updates" required>
+             <button class="btn btn-lg" type="submit">Submit</button>
+          </div>
+         </form>
+      </div>
+
+      <div class="footer">
+        <img class="bg-logo" src="imgs/bg-logo.png">
+        <div class="wrapper">
+          <div class="col-sm-offset-6 col-sm-6 col-xs-12">
+            <ul class="col-xs-offset-6">
               <li><a href=""><i class="fa fa-facebook-official"></i>Facebook</a></li>
               <li><a href=""><i class="fa fa-instagram"></i>Instagram</a></li>
               <li><a href=""><i class="fa fa-twitter"></i>Twitter</a></li>
             </ul>
           </div>
         </div>
-      </div>
-      <div class="copyright">
-        <p>© 2016 HoneyCo Homes, All rights reserved.</p>
+        <div class="copyright">
+          <p>© 2016 HoneyCo Homes, All rights reserved.</p>
+        </div>
       </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-  
-        $(window).scroll(function () {
-            //if you hard code, then use console
-            //.log to determine when you want the 
-            //nav bar to stick.  
-            console.log($(window).scrollTop())
-          if ($(window).scrollTop() > 130) {
-            $('.nav-bar').addClass('navbar-fixed');
-          }
-          if ($(window).scrollTop() < 131) {
-            $('.nav-bar').removeClass('navbar-fixed');
-          }
-        });
-      });
-      $('.carousel').carousel({
-          interval: false
-      }); 
-    </script>
+    <script src="js/bigslide.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
