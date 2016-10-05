@@ -386,14 +386,14 @@ h3 {
 
   .btn-yellow {
     font-size: 12px; } }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 700px) {
   .header {
     background-position: center; }
     .header .wrapper {
       padding: 30px;
       position: relative; }
       .header .wrapper .content {
-        padding: 100px 0;
+        padding: 100px 0 50px;
         transform: initial; }
         .header .wrapper .content br {
           display: none; }

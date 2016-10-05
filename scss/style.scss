@@ -11,7 +11,7 @@ $subTextLightColor: #4d4d4d;
 $copyrightBackColor: #f2f2f2;
 $copyrightTextColor: #808080;
 
-$screen-xs:	480px;
+$screen-xs:	700px;
 $screen-sm:	768px;
 $screen-md:	992px;
 $screen-lg:	1200px;
@@ -571,7 +571,7 @@ h3{
 			padding: $mobileGutter;
 			position: relative;
 			.content {
-				padding: 100px 0;
+				padding: 100px 0 50px;
 				transform: initial;
 				br {
 					display: none;
