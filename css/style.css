@@ -48,7 +48,7 @@ h3 {
   font-size: 35px; }
 
 .header {
-  background: no-repeat url("../imgs/banner.jpg");
+  background: no-repeat url("../img/banner.jpg");
   position: relative;
   background-size: 100% 100%; }
   .header:after {
@@ -110,7 +110,7 @@ h3 {
         .header .nav-bar .nav-links li a {
           color: #fff;
           font-size: 18px; }
-        .header .nav-bar .nav-links li #join {
+        .header .nav-bar .nav-links li .nav-join {
           color: #e9c046;
           border: 2px solid #e9c046;
           border-radius: 15px;
@@ -410,7 +410,7 @@ h3 {
 
   .security {
     display: inline-block;
-    background: url("../imgs/security.jpg");
+    background: url("../img/security.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; }

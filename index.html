@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/swipebox/src/css/swipebox.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -26,15 +27,15 @@
         <li><a href="#" class="nav-home">Your Home</a></li>
         <li><a href="#" class="nav-tech">Technology</a></li>
         <li><a href="#" class="nav-community">Community</a></li>
-        <li><a id="join" href="#">Join</a></li>
+        <li><a href="#" class="nav-join">Join</a></li>
       </ul>
     </nav>
     <div class="content push">
       <div class="header">
         <div class="nav-bar">
-          <!-- <img class="logo" src="imgs/logo.svg"> -->
+          <!-- <img class="logo" src="img/logo.svg"> -->
           <div class="nav-logo">
-            <img class="logo" src="imgs/logo.svg">
+            <img class="logo" src="img/logo.svg">
             <span>HoneyCo</span>
             <span class="small"> Homes</span>
           </div>
@@ -43,7 +44,7 @@
             <li><a href="#" class="nav-home">Your Home</a></li>
             <li><a href="#" class="nav-tech">Technology</a></li>
             <li><a href="#" class="nav-community">Community</a></li>
-            <li><a id="join" href="#">Join</a></li>
+            <li><a href="#" class="nav-join">Join</a></li>
           </ul>
           <a href="#menu" class="menu-link">
             <div class="mobileNavigator">&#9776;</div>
@@ -54,9 +55,9 @@
           <div class="content">
             <h1>Connected living for <br> a booming population.</h1>
             <h2>Powered by technology and community, <br> welcome to the new retirement. <br> This is living on your terms</h2>
-            <a href="#" class="btn-yellow">Discover</a>
+            <a href="#" class="btn-yellow btn-discover">Discover</a>
             <a href="#" id="down-arrow">
-              <img src="imgs/down-arrow.png">
+              <img src="img/down-arrow.png">
             </a>
           </div>
         </div>
@@ -64,23 +65,24 @@
 
       <div class="retirement">
         <div class="section-image">
-          <img src="imgs/retirement.jpg">
+          <img src="img/retirement.jpg">
         </div>
         <div class="sub-section">
           <div class="description">
             <h3>A better residential <br> retirement model.</h3>
             <p>HoneyCo Homes is rethinking the traditional retirement living model. By harnessing the lastest in technology and engaging with the community, you now have access to the world's first distributed retirement community.</p>
-            <a href="#" class="btn-yellow">Watch Video</a>
+            <a href="img/retirement.jpg" class="swipebox btn-yellow btn-watch">Watch Video</a>
+            <a class="swipebox-video">My Videos</a>
           </div>
         </div>
       </div>
 
       <div class="security">
-        <img src="imgs/security.jpg">
+        <img src="img/security.jpg">
         <div class="description col-xs-12 col-sm-6">
           <h3>Security and safety. <br> In your home.</h3>
           <p>Whether it's where you raised your kids or a new adventure entirely, enjoy your home on your terms. Affordable and accessible options.</p>
-          <a href="#" class="btn-yellow">Learn More</a>
+          <a href="#" class="btn-yellow btn-learn">Learn More</a>
         </div>
       </div>
 
@@ -90,22 +92,22 @@
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
               <div class="item active">
-                <img src="imgs/gallery.png">
+                <img src="img/gallery.png">
               </div>
               <div class="item">
-                <img src="imgs/gallery.png">
+                <img src="img/gallery.png">
               </div>
             </div>
             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-              <img src="imgs/left-arrow.png">
+              <img src="img/left-arrow.png">
             </a>
             <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-              <img src="imgs/right-arrow.png">
+              <img src="img/right-arrow.png">
             </a>
           </div>
           <p>Can't remember if you turned off the stove? Is the door locked? <br>
           <span class="light">No worries. With a HoneyCo Home, peace of mind is always at hand.</span></p>
-          <a href="#" class="btn-yellow">Learn More</a>
+          <a href="#" class="btn-yellow btn-learn">Learn More</a>
         </div>
       </div>
 
@@ -114,11 +116,11 @@
           <div class="description">
             <h3>A grassroots community at your doorstep.</h3>
             <p>Your in-person community ambassador will help keep you connected with the people, events and opportunities around you.</p>
-            <a href="#" class="btn-yellow">Learn More</a>
+            <a href="#" class="btn-yellow btn-learn">Learn More</a>
           </div>
         </div>
         <div class="section-image">
-          <img src="imgs/community.jpg">
+          <img src="img/community.jpg">
         </div>
       </div>
 
@@ -134,7 +136,7 @@
       </div>
 
       <div class="footer">
-        <img class="bg-logo" src="imgs/bg-logo.png">
+        <img class="bg-logo" src="img/bg-logo.png">
         <div class="wrapper">
           <div class="col-xs-offset-6 col-xs-6">
             <ul>
@@ -153,6 +155,7 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
     <script src="js/bigslide.js"></script>
     <script src="js/script.js"></script>
   </body>

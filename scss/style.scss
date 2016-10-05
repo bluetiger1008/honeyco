@@ -84,7 +84,7 @@ h3{
 }
 
 .header {
-	background: no-repeat url('../imgs/banner.jpg');
+	background: no-repeat url('../img/banner.jpg');
 	position: relative;
 	background-size: 100% 100%;
 
@@ -171,7 +171,7 @@ h3{
 					font-size: $normalBodyFontsize;
 				}
 
-				#join {
+				.nav-join {
 					color: $orange;
 					border: 2px solid $orange;
 					border-radius: 15px;
@@ -597,7 +597,7 @@ h3{
 		img {
 			display: none;
 		}
-		background: url('../imgs/security.jpg');
+		background: url('../img/security.jpg');
 	    background-repeat: no-repeat;
 	    background-attachment: fixed;
 	    background-position: center;
