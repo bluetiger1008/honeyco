@@ -31,7 +31,7 @@
         $('.swipebox-video').click(function (e) {
             e.preventDefault();
             $.swipebox([
-                {href: 'https://vimeo.com/29193046', title: 'My Caption', rel: 'vimeo'}
+                {href: 'https://vimeo.com/29193046', title: 'HoneyCo Homes', rel: 'vimeo'}
             ]);
         });
 
