@@ -15,7 +15,7 @@ $(document).ready(function() {
   $( '.swipebox-video' ).click( function( e ) {
     e.preventDefault();
     $.swipebox( [
-      { href:'http://vimeo.com/29193046', title:'My Caption', rel:'vimeo' }
+      { href:'https://vimeo.com/29193046', title:'My Caption', rel:'vimeo' }
     ] );
   } );
 });
@@ -34,12 +34,32 @@ var close_setting = {
   'state': 'closed'
 };
 
+var width = $(window).width();
+var headeroffset;
+if(width > 992){
+  headeroffset = 78;
+  mobile_flag = 0;
+}
+else{
+  headeroffset = 107;
+  mobile_flag = 1;
+}
+
+$(window).on('resize', function(){
+  width = $(window).width();
+  if(width > 992){
+    headeroffset = 78;
+    mobile_flag = 0;
+  }
+  else{
+    headeroffset = 107;
+    mobile_flag = 1;
+  }
+});
+
 $('.nav-join').click(function() {
-    $('html, body').animate({
-        scrollTop: $('.connect').offset().top
-    }, 1000);
-    
-    $('.menu-link').bigSlide(close_setting);
+  scrolling(mobile_flag, $('.connect'));
+  $('.menu-link').bigSlide(close_setting);
 });
 
 $('.btn-discover').click(function() {
@@ -48,30 +68,37 @@ $('.btn-discover').click(function() {
     }, 1000);
 });
 
-$('.nav-about').click(function() {
+function scrolling(mobile_flag, element){
+  if(mobile_flag==1){
+    setTimeout(function() { 
+      $('html, body').animate({
+          scrollTop: element.offset().top - headeroffset
+      }, 1000);
+    }, 300);  
+  }
+  else{
     $('html, body').animate({
-        scrollTop: $('.retirement').offset().top
+        scrollTop: element.offset().top - headeroffset
     }, 1000);
-    $('.menu-link').bigSlide(close_setting);
+  }
+}
+
+$('.nav-about').click(function() {
+  scrolling(mobile_flag, $('.retirement'));
+  $('.menu-link').bigSlide(close_setting);
 });
 
 $('.nav-home').click(function() {
-    $('html, body').animate({
-        scrollTop: $('.security').offset().top
-    }, 1000);
-    $('.menu-link').bigSlide(close_setting);
+  $('.menu-link').bigSlide(close_setting);
+  scrolling(mobile_flag, $('.security'));
 });
 
 $('.nav-tech').click(function() {
-    $('html, body').animate({
-        scrollTop: $('.gallery').offset().top
-    }, 1000);
     $('.menu-link').bigSlide(close_setting);
+    scrolling(mobile_flag, $('.gallery'));
 });
 
 $('.nav-community').click(function() {
-    $('html, body').animate({
-        scrollTop: $('.community').offset().top
-    }, 1000);
-    $('.menu-link').bigSlide(close_setting);
+  $('.menu-link').bigSlide(close_setting);
+  scrolling(mobile_flag, $('.community'));
 });
