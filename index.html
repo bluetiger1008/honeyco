@@ -74,7 +74,8 @@
         <p>HoneyCo Homes is rethinking the traditional retirement living model. By harnessing the lastest in technology
           and engaging with the community, you now have access to the world's first distributed retirement
           community.</p>
-        <a class="swipebox-video btn-yellow btn-watch">Watch Video</a>
+        <!--<a class="swipebox-video btn-yellow btn-watch">Watch Video</a> -->
+        <a class="btn-yellow" href="#connect">Learn More</a>
       </div>
     </div>
   </div>
@@ -131,11 +132,13 @@
   <div id="connect" class="connect">
     <h4>Get Connected. Stay Connected.</h4>
     <p>Sign up to receive updates from HoneyCo and apply for early access</p>
-    <form action="#">
+    <form id="connectForm" action="https://visitor2.constantcontact.com/api/signup" method="post">
+      <input type="hidden" name="ca" value="a7bd0f16-f28a-423e-a677-65119172bbe7" />
+      <input type="hidden" name="list" value="1049878716" />
       <div class="input-group">
         <input class="btn btn-lg" name="email" id="email" type="email" placeholder="Enter your email for updates"
                required>
-        <button class="btn btn-lg" type="submit">Submit</button>
+        <button id="connectSubmit" class="btn btn-lg" type="submit">Submit</button>
       </div>
     </form>
   </div>
@@ -145,9 +148,9 @@
     <div class="wrapper">
       <div class="col-xs-offset-5 col-xs-7 col-sm-offset-8 col-sm-4">
         <ul>
-          <li><a href=""><i class="fa fa-facebook-official"></i>Facebook</a></li>
-          <li><a href=""><i class="fa fa-instagram"></i>Instagram</a></li>
-          <li><a href=""><i class="fa fa-twitter"></i>Twitter</a></li>
+          <li><a href="https://www.facebook.com/honeycohomes"><i class="fa fa-facebook-official"></i>Facebook</a></li>
+          <li><a href="https://twitter.com/honeycohomes"><i class="fa fa-twitter"></i>Twitter</a></li>
+          <li><a href="https://angel.co/honeyco-homes"><i class="fa fa-angellist"></i>AngelList</a></li>
         </ul>
       </div>
     </div>
@@ -163,5 +166,27 @@
 <script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
 <script src="js/bigslide.js"></script>
 <script src="js/script.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#connectForm").submit(function(event) {
+      $("#connectSubmit").html('<i class="fa fa-spinner fa-spin fa-2x fa-fw"></i><span class="sr-only">Loading...</span>');
+      $("#connectSubmit").prop( "disabled", true );
+      var formData = $("#connectForm").serialize();
+      $.ajax({
+        type : 'POST', // HTTP method, always use POST for our form
+        url : 'https://visitor2.constantcontact.com/api/signup',
+        data : formData, // serialized form data
+        dataType : 'json', // the type of data we expect back from the server
+        success: function(data){
+          $("#connectForm").replaceWith("<p>Thank you for joining our mailing list!</p>");
+        },
+        error: function(response) {
+          $("#connectForm").replaceWith("<p>Something went wrong! Please try again later.</p>");
+        }
+      });
+      event.preventDefault();
+    });
+  });
+</script>
 </body>
 </html>
