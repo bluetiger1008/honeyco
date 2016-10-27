@@ -194,7 +194,9 @@ h3 {
   .gallery .wrapper .carousel .carousel-inner {
     display: flex;
     justify-content: center;
-    width: 70%;
+    max-width: 400px;
+    width: auto;
+    height: auto;
     margin: auto; }
   .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
     height: auto; 
