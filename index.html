@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <title>HoneyCo</title>
 
   <!-- Bootstrap -->
@@ -23,11 +25,11 @@
 <body>
 <nav id="menu" class="panel" role="navigation">
   <ul class="nav-links">
-    <li><a href="#retirement" class="nav-link">About</a></li>
-    <li><a href="#security" class="nav-link">Your Home</a></li>
-    <li><a href="#gallery" class="nav-link">Technology</a></li>
-    <li><a href="#community" class="nav-link">Community</a></li>
-    <li><a href="#connect" class="nav-link">Join</a></li>
+    <li><a href="#retirement" class="nav-link" data-scroll>About</a></li>
+    <li><a href="#security" class="nav-link" data-scroll>Your Home</a></li>
+    <li><a href="#gallery" class="nav-link" data-scroll>Technology</a></li>
+    <li><a href="#community" class="nav-link" data-scroll>Society</a></li>
+    <li><a href="#connect" class="nav-link" data-scroll>Join</a></li>
   </ul>
 </nav>
 <div class="content push">
@@ -40,11 +42,11 @@
         <span class="small"> Homes</span>
       </div>
       <ul class="nav-links">
-        <li><a href="#retirement" class="nav-link">About</a></li>
-        <li><a href="#security" class="nav-link">Your Home</a></li>
-        <li><a href="#gallery" class="nav-link">Technology</a></li>
-        <li><a href="#community" class="nav-link">Community</a></li>
-        <li><a href="#connect" class="nav-link">Join</a></li>
+        <li><a href="#retirement" class="nav-link" data-scroll>About</a></li>
+        <li><a href="#security" class="nav-link" data-scroll>Your Home</a></li>
+        <li><a href="#gallery" class="nav-link" data-scroll>Technology</a></li>
+        <li><a href="#community" class="nav-link" data-scroll>Society</a></li>
+        <li><a href="#connect" class="nav-link" data-scroll>Join</a></li>
       </ul>
       <a href="#menu" class="menu-link">
         <div class="mobileNavigator">&#9776;</div>
@@ -54,10 +56,10 @@
     <div class="wrapper">
       <div class="content">
         <h1>Connected living for <br> a booming population.</h1>
-        <h2>Powered by technology and community, <br> welcome to the new retirement. <br> This is living on your terms
+        <h2>Powered by technology and community, <br> welcome to unRetirement.
         </h2>
-        <a href="#connect" class="btn-yellow">Discover</a>
-        <a href="#retirement" id="down-arrow">
+        <a href="#connect" class="btn-yellow" data-scroll>Discover</a>
+        <a href="#retirement" id="down-arrow" data-scroll>
           <img src="img/down-arrow.png">
         </a>
       </div>
@@ -70,11 +72,12 @@
     </div>
     <div class="sub-section">
       <div class="description">
-        <h3>A better residential <br> retirement model.</h3>
-        <p>HoneyCo Homes is rethinking the traditional retirement living model. By harnessing the lastest in technology
-          and engaging with the community, you now have access to the world's first distributed retirement
-          community.</p>
-        <a class="swipebox-video btn-yellow btn-watch">Watch Video</a>
+        <h3>Rent a home, <br/>not a hallway</h3>
+        <p>HoneyCo rental homes are located in multigenerational neighborhoods. These homes offer the resident a
+          maintenance-free lifestyle, supported by smart home technology and connected to community. Make the most of
+          your unRetirement in a HoneyCo Home.</p>
+        <!--<a class="swipebox-video btn-yellow btn-watch">Watch Video</a> -->
+        <a class="btn-yellow" href="#connect" data-scroll>Learn More</a>
       </div>
     </div>
   </div>
@@ -82,10 +85,11 @@
   <div id="security" class="security">
     <img src="img/security.jpg">
     <div class="description col-xs-12 col-sm-6">
-      <h3>Security and safety. <br> In your home.</h3>
-      <p>Whether it's where you raised your kids or a new adventure entirely, enjoy your home on your terms. Affordable
-        and accessible options.</p>
-      <a href="#connect" class="btn-yellow">Learn More</a>
+      <h3>The Internet of caring things.</h3>
+      <p>Technological obsolescence is obsolete. HoneyCo has built the universal connector of smart home features. We do
+        the research and the integration of the hardware so you don't have to. And when something better comes out,
+        we'll make sure it works for you.</p>
+      <a href="#connect" class="btn-yellow" data-scroll>Learn More</a>
     </div>
   </div>
 
@@ -95,10 +99,16 @@
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="img/gallery.png">
+            <img src="img/portal_dashboard.png">
           </div>
           <div class="item">
-            <img src="img/gallery.png">
+            <img src="img/portal_community.png">
+          </div>
+          <div class="item">
+            <img src="img/portal_doors.png">
+          </div>
+          <div class="item">
+            <img src="img/portal_firesafety.png">
           </div>
         </div>
         <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -110,17 +120,24 @@
       </div>
       <p>Can't remember if you turned off the stove? Is the door locked? <br>
         <span class="light">No worries. With a HoneyCo Home, peace of mind is always at hand.</span></p>
-      <a href="#connect" class="btn-yellow btn-cta">Learn More</a>
+      <a href="#connect" class="btn-yellow btn-cta" data-scroll>Learn More</a>
     </div>
   </div>
 
   <div id="community" class="community">
     <div class="sub-section">
       <div class="description">
-        <h3>A grassroots community at your doorstep.</h3>
-        <p>Your in-person community ambassador will help keep you connected with the people, events and opportunities
-          around you.</p>
-        <a href="#connect" class="btn-yellow">Learn More</a>
+        <h3>unRetire</h3>
+        <p>Introducing <strong>HoneyCo Society</strong>: a unique human and online network of multi-generational members. Inspired by
+          volunteerism, continuing education, and wellness, the HoneyCo Society puts avenues of social engagement within
+          reach of any resident.
+          <br /><br />
+          Each resident selects a dedicated HoneyCo Ambassador. The HoneyCo Ambassador is your in-person, real-life
+          problem solver, activity coordinator, social connector, and expert listener.
+          <br /><br />
+          HoneyCo Society @Home is the digital counterpart to your HoneyCo Ambassador. Browse local and curated
+          activities online or message a friend.</p>
+        <a href="#connect" class="btn-yellow" data-scroll>Learn More</a>
       </div>
     </div>
     <div class="section-image">
@@ -131,11 +148,13 @@
   <div id="connect" class="connect">
     <h4>Get Connected. Stay Connected.</h4>
     <p>Sign up to receive updates from HoneyCo and apply for early access</p>
-    <form action="#">
+    <form id="connectForm" action="https://visitor2.constantcontact.com/api/signup" method="post">
+      <input type="hidden" name="ca" value="a7bd0f16-f28a-423e-a677-65119172bbe7" />
+      <input type="hidden" name="list" value="1049878716" />
       <div class="input-group">
         <input class="btn btn-lg" name="email" id="email" type="email" placeholder="Enter your email for updates"
                required>
-        <button class="btn btn-lg" type="submit">Submit</button>
+        <button id="connectSubmit" class="btn btn-lg" type="submit">Submit</button>
       </div>
     </form>
   </div>
@@ -143,11 +162,19 @@
   <div class="footer">
     <img class="bg-logo" src="img/bg-logo.png">
     <div class="wrapper">
-      <div class="col-xs-offset-5 col-xs-7 col-sm-offset-8 col-sm-4">
+      <div class="col-sm-offset-4 col-xs-12 col-sm-4">
         <ul>
-          <li><a href=""><i class="fa fa-facebook-official"></i>Facebook</a></li>
-          <li><a href=""><i class="fa fa-instagram"></i>Instagram</a></li>
-          <li><a href=""><i class="fa fa-twitter"></i>Twitter</a></li>
+          <li><i class="fa fa-fw fa-phone"></i>&nbsp;(615) 266-5243</li>
+          <li><i class="fa fa-fw fa-home"></i>&nbsp;331 54th Ave N.</li>
+          <li><i class="fa fa-fw"></i>&nbsp;Nashville, TN 37209</li>
+          <li><i class="fa fa-fw fa-envelope"></i>&nbsp;<a href="mailto:info@honeyco.com">info@honeyco.com</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <ul>
+          <li><a href="https://www.facebook.com/honeycohomes"><i class="fa fa-fw fa-facebook-official"></i>&nbsp;Facebook</a></li>
+          <li><a href="https://twitter.com/honeycohomes"><i class="fa fa-fw fa-twitter"></i>&nbsp;Twitter</a></li>
+          <li><a href="https://angel.co/honeyco-homes"><i class="fa fa-fw fa-angellist"></i>&nbsp;AngelList</a></li>
         </ul>
       </div>
     </div>
@@ -163,5 +190,38 @@
 <script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
 <script src="js/bigslide.js"></script>
 <script src="js/script.js"></script>
+<script>
+  $(document).ready(function() {
+    $("#connectForm").submit(function(event) {
+      $("#connectSubmit").html('<i class="fa fa-spinner fa-spin fa-2x fa-fw"></i><span class="sr-only">Loading...</span>');
+      $("#connectSubmit").prop( "disabled", true );
+      var formData = $("#connectForm").serialize();
+      $.ajax({
+        type : 'POST', // HTTP method, always use POST for our form
+        url : 'https://visitor2.constantcontact.com/api/signup',
+        data : formData, // serialized form data
+        dataType : 'json', // the type of data we expect back from the server
+        success: function(data){
+          $("#connectForm").replaceWith("<p>Thank you for joining our mailing list!</p>");
+        },
+        error: function(response) {
+          $("#connectForm").replaceWith("<p>Something went wrong! Please try again later.</p>");
+        }
+      });
+      event.preventDefault();
+    });
+  });
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-84564290-1', 'auto');
+  ga('require', 'linkid');
+  ga('send', 'pageview');
+
+</script></script>
 </body>
 </html>
