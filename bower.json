@@ -3,7 +3,8 @@
   "description": "",
   "main": "index.js",
   "authors": [
-    "marcinrobak1008"
+    "marcinrobak1008",
+    "zachmccormick"
   ],
   "license": "ISC",
   "homepage": "https://github.com/iam2611008/honeyco",
