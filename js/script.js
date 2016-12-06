@@ -19,27 +19,48 @@
 
     // On page load:
     $(document).ready(function () {
+
+        // Makes sure navbar has background if site is reloaded below page top.
+        if($(window).scrollTop() > 59) {
+            $('.nav-bar').addClass('navbar-fixed')
+        }
+
+        // Adds semi-transparent overlay to nav bar when scrolled down.
         $(window).scroll(function () {
-            if ($(window).scrollTop() > 130) {
+            if ($(window).scrollTop() > 59) {
                 $('.nav-bar').addClass('navbar-fixed');
             }
-            if ($(window).scrollTop() < 131) {
+            if ($(window).scrollTop() < 60) {
                 $('.nav-bar').removeClass('navbar-fixed');
             }
         });
-        $('.menu-link').bigSlide();
-        $('.swipebox-video').click(function (e) {
-            e.preventDefault();
-            $.swipebox([
-                {href: 'https://vimeo.com/29193046', title: 'HoneyCo Homes', rel: 'vimeo'}
-            ]);
-        });
 
-        $('.carousel').carousel({
-            interval: false
-        });
+        // Initializes 'Big Slide' panel plugin.
+        $('.menu-link').bigSlide();
+
+        // Closes 'Big Slide' panel on anchor link click.
         $('.nav-link').click(function () {
             $('.menu-link').bigSlide({'state': 'closed'});
+        });
+
+        // Submits Contact Form.
+        $("#connectForm").submit(function(event) {
+          $("#connectSubmit").html('<i class="fa fa-spinner fa-spin fa-2x fa-fw"></i><span class="sr-only">Loading...</span>');
+          $("#connectSubmit").prop( "disabled", true );
+          var formData = $("#connectForm").serialize();
+          $.ajax({
+            type : 'POST', // HTTP method, always use POST for our form
+            url : 'https://visitor2.constantcontact.com/api/signup',
+            data : formData, // serialized form data
+            dataType : 'json', // the type of data we expect back from the server
+            success: function(data){
+              $("#connectForm").replaceWith("<p>Thank you for joining our mailing list!</p>");
+            },
+            error: function(response) {
+              $("#connectForm").replaceWith("<p>Something went wrong! Please try again later.</p>");
+            }
+          });
+          event.preventDefault();
         });
     });
 })();
