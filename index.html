@@ -4,12 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <title>HoneyCo</title>
 
-  <!-- Bootstrap -->
+  <!-- Stylesheets -->
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="bower_components/swipebox/src/css/swipebox.css" rel="stylesheet">
@@ -22,105 +21,84 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
+
 <body>
-<nav id="menu" class="panel" role="navigation">
+<!--'big slide' div-->
+<div id="menu" class="panel" role="navigation">
   <ul class="nav-links">
-    <li><a href="#retirement" class="nav-link" data-scroll>About</a></li>
-    <li><a href="#security" class="nav-link" data-scroll>Your Home</a></li>
-    <li><a href="#gallery" class="nav-link" data-scroll>Technology</a></li>
+    <li><a href="#about" class="nav-link" data-scroll>About</a></li>
+    <li><a href="#products" class="nav-link" data-scroll>Products</a></li>
     <li><a href="#community" class="nav-link" data-scroll>Society</a></li>
     <li><a href="#connect" class="nav-link" data-scroll>Join</a></li>
-  </ul>
-</nav>
-<div class="content push">
-  <div class="header">
-    <div class="nav-bar">
-      <!-- <img class="logo" src="img/logo.svg"> -->
-      <div class="nav-logo">
-        <img class="logo" src="img/logo.svg">
-        <span>HoneyCo</span>
-        <span class="small"> Homes</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#retirement" class="nav-link" data-scroll>About</a></li>
-        <li><a href="#security" class="nav-link" data-scroll>Your Home</a></li>
-        <li><a href="#gallery" class="nav-link" data-scroll>Technology</a></li>
-        <li><a href="#community" class="nav-link" data-scroll>Society</a></li>
-        <li><a href="#connect" class="nav-link" data-scroll>Join</a></li>
-      </ul>
-      <a href="#menu" class="menu-link">
-        <div class="mobileNavigator">&#9776;</div>
-      </a>
-    </div>
+    <li><hr></li>
+    <li><a href="packages.html" class="nav-link">Care Packages</a></li>
+    <li><a href="#" class="nav-link">Homes</a></li>
+    <li><a href="#" class="nav-link">Log In</a></li>
 
+  </ul>
+</div>
+<!--everything inside this 'push' div moves over during 'big slide'-->
+<div class="content push">
+
+  <!-- NAV BAR -->
+  <div class="nav-bar">
+    <a class="nav-logo">
+      <img class="logo" src="img/logo.svg">
+      <span>HoneyCo Homes</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link" data-scroll>About</a></li>
+      <li><a href="#products" class="nav-link" data-scroll>Products</a></li>
+      <li><a href="#community" class="nav-link" data-scroll>Society</a></li>
+      <li><a href="#connect" class="nav-link" data-scroll>Join</a></li>
+      <li><a href="packages.html" class="nav-link">Care Packages</a></li>
+      <li><a href="#" class="nav-link" disabled>Homes</a></li>
+      <li><a href="#" class="nav-link" disabled>Log In</a></li>
+    </ul>
+    <a href="#menu" class="menu-link">
+      <div class="mobileNavigator">Menu</div>
+    </a>
+  </div>
+
+  <div class="header">
     <div class="wrapper">
       <div class="content">
         <h1>Connected living for <br> a booming population.</h1>
         <h2>Powered by technology and community, <br> welcome to unRetirement.
         </h2>
-        <a href="#connect" class="btn-yellow" data-scroll>Discover</a>
-        <a href="#retirement" id="down-arrow" data-scroll>
+        <a href="#about" id="down-arrow" data-scroll>
           <img src="img/down-arrow.png">
         </a>
       </div>
     </div>
   </div>
 
-  <div id="retirement" class="retirement">
+  <div id="about" class="about-section">
     <div class="section-image">
       <img src="img/retirement.jpg">
     </div>
     <div class="sub-section">
       <div class="description">
+        <!--TODO: this text def needs to change.-->
         <h3>Rent a home, <br/>not a hallway</h3>
         <p>HoneyCo rental homes are located in multigenerational neighborhoods. These homes offer the resident a
           maintenance-free lifestyle, supported by smart home technology and connected to community. Make the most of
           your unRetirement in a HoneyCo Home.</p>
-        <!--<a class="swipebox-video btn-yellow btn-watch">Watch Video</a> -->
-        <a class="btn-yellow" href="#connect" data-scroll>Learn More</a>
+        <a class="btn-yellow" href="#connect" data-scroll>Contact Honeyco</a>
       </div>
     </div>
   </div>
 
-  <div id="security" class="security">
+  <div id="products" class="security">
     <img src="img/security.jpg">
     <div class="description col-xs-12 col-sm-6">
       <h3>The Internet of caring things.</h3>
-      <p>Technological obsolescence is obsolete. HoneyCo has built the universal connector of smart home features. We do
-        the research and the integration of the hardware so you don't have to. And when something better comes out,
-        we'll make sure it works for you.</p>
-      <a href="#connect" class="btn-yellow" data-scroll>Learn More</a>
-    </div>
-  </div>
-
-  <div id="gallery" class="gallery">
-    <div class="wrapper">
-      <h3>A smart home, at your fingertips.</h3>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img src="img/portal_dashboard.png">
-          </div>
-          <div class="item">
-            <img src="img/portal_community.png">
-          </div>
-          <div class="item">
-            <img src="img/portal_doors.png">
-          </div>
-          <div class="item">
-            <img src="img/portal_firesafety.png">
-          </div>
-        </div>
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <img src="img/left-arrow.png">
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <img src="img/right-arrow.png">
-        </a>
-      </div>
-      <p>Can't remember if you turned off the stove? Is the door locked? <br>
-        <span class="light">No worries. With a HoneyCo Home, peace of mind is always at hand.</span></p>
-      <a href="#connect" class="btn-yellow btn-cta" data-scroll>Learn More</a>
+      <p>HoneyCo offers the universal connector of smart home features.
+        We do the research and the integration of the hardware and services so you don't have to.
+        And when something better comes out, we'll make sure it works for you.
+        You don't need to worry about the details. We have the people to take care of that for you.</p>
+      <button type="button" class="btn-yellow" data-toggle="modal" data-target="#about-video-modal">Learn More</button>
     </div>
   </div>
 
@@ -128,16 +106,18 @@
     <div class="sub-section">
       <div class="description">
         <h3>unRetire</h3>
-        <p>Introducing <strong>HoneyCo Society</strong>: a unique human and online network of multi-generational members. Inspired by
+        <p>Introducing <strong>HoneyCo Society</strong>: a unique human and online network of multi-generational
+          members. Inspired by
           volunteerism, continuing education, and wellness, the HoneyCo Society puts avenues of social engagement within
           reach of any resident.
-          <br /><br />
+          <br/><br/>
           Each resident selects a dedicated HoneyCo Ambassador. The HoneyCo Ambassador is your in-person, real-life
           problem solver, activity coordinator, social connector, and expert listener.
-          <br /><br />
+          <br/><br/>
           HoneyCo Society @Home is the digital counterpart to your HoneyCo Ambassador. Browse local and curated
           activities online or message a friend.</p>
-        <a href="#connect" class="btn-yellow" data-scroll>Learn More</a>
+        <button type="button" class="btn-yellow" data-toggle="modal" data-target="#society-video-modal">Learn More
+        </button>
       </div>
     </div>
     <div class="section-image">
@@ -149,8 +129,8 @@
     <h4>Get Connected. Stay Connected.</h4>
     <p>Sign up to receive updates from HoneyCo and apply for early access</p>
     <form id="connectForm" action="https://visitor2.constantcontact.com/api/signup" method="post">
-      <input type="hidden" name="ca" value="a7bd0f16-f28a-423e-a677-65119172bbe7" />
-      <input type="hidden" name="list" value="1049878716" />
+      <input type="hidden" name="ca" value="a7bd0f16-f28a-423e-a677-65119172bbe7"/>
+      <input type="hidden" name="list" value="1049878716"/>
       <div class="input-group">
         <input class="btn btn-lg" name="email" id="email" type="email" placeholder="Enter your email for updates"
                required>
@@ -159,6 +139,7 @@
     </form>
   </div>
 
+  <!-- FOOTER -->
   <div class="footer">
     <img class="bg-logo" src="img/bg-logo.png">
     <div class="wrapper">
@@ -172,9 +153,14 @@
       </div>
       <div class="col-xs-12 col-sm-4">
         <ul>
-          <li><a href="https://www.facebook.com/honeycohomes"><i class="fa fa-fw fa-facebook-official"></i>&nbsp;Facebook</a></li>
-          <li><a href="https://twitter.com/honeycohomes"><i class="fa fa-fw fa-twitter"></i>&nbsp;Twitter</a></li>
-          <li><a href="https://angel.co/honeyco-homes"><i class="fa fa-fw fa-angellist"></i>&nbsp;AngelList</a></li>
+          <li><a href="https://www.facebook.com/honeycohomes" target="_blank"><i
+              class="fa fa-fw fa-facebook-official"></i>&nbsp;Facebook</a></li>
+          <li><a href="https://www.instagram.com/honeycohomes" target="_blank"><i class="fa fa-fw fa-instagram"></i>&nbsp;Instagram</a>
+          </li>
+          <li><a href="https://twitter.com/honeycohomes" target="_blank"><i class="fa fa-fw fa-twitter"></i>&nbsp;Twitter</a>
+          </li>
+          <li><a href="https://angel.co/honeyco-homes" target="_blank"><i class="fa fa-fw fa-angellist"></i>&nbsp;AngelList</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -183,45 +169,63 @@
     </div>
   </div>
 </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+<!-- ABOUT VIDEO MODAL -->
+<div class="modal fade" id="about-video-modal" tabindex="-1" role="dialog" aria-labelledby="about-video">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/61971077" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SOCIETY VIDEO MODAL -->
+<div class="modal fade" id="society-video-modal" tabindex="-1" role="dialog" aria-labelledby="society-video">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/4914928" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Dependencies-->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
 <script src="js/bigslide.js"></script>
+<!--Custom Scripts-->
 <script src="js/script.js"></script>
 <script>
-  $(document).ready(function() {
-    $("#connectForm").submit(function(event) {
-      $("#connectSubmit").html('<i class="fa fa-spinner fa-spin fa-2x fa-fw"></i><span class="sr-only">Loading...</span>');
-      $("#connectSubmit").prop( "disabled", true );
-      var formData = $("#connectForm").serialize();
-      $.ajax({
-        type : 'POST', // HTTP method, always use POST for our form
-        url : 'https://visitor2.constantcontact.com/api/signup',
-        data : formData, // serialized form data
-        dataType : 'json', // the type of data we expect back from the server
-        success: function(data){
-          $("#connectForm").replaceWith("<p>Thank you for joining our mailing list!</p>");
-        },
-        error: function(response) {
-          $("#connectForm").replaceWith("<p>Something went wrong! Please try again later.</p>");
-        }
-      });
-      event.preventDefault();
-    });
-  });
+    // Google Analytics
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-84564290-1', 'auto');
+    ga('require', 'linkid');
+    ga('send', 'pageview');
 </script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-84564290-1', 'auto');
-  ga('require', 'linkid');
-  ga('send', 'pageview');
-
-</script></script>
 </body>
 </html>
