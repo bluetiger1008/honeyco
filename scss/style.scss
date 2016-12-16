@@ -33,6 +33,11 @@ $mobile-h3: 25px;
 $normalBtnFontsize: 14px;
 $mobileBtnFontsize: 12px;
 
+$retirementHeight: 97vh;
+$securityHeight: 97vh;
+$societyHeight: 97vh;
+
+
 body {
   background: $bodyBackground;
   font-family: 'Montserrat';
@@ -157,9 +162,11 @@ h3 {
 
       #down-arrow {
         display: block;
+        // If you add a button back into the header, remove this margin.
+        margin: 75px 0 30px;
 
         img {
-          width: 26px;
+          width: 55px;
         }
       }
     }
@@ -178,68 +185,76 @@ h3 {
   font-weight: normal;
 }
 
-.retirement {
-  display: -webkit-flex;
-  display: flex;
 
-  img {
-    flex: 1;
-    -webkit-flex: 1; /* Safari 6.1+ */
-    -ms-flex: 1; /* IE 10 */ 
+.split-section {
+  color: $headerTextColor;
+  .image {
+    margin: 0;
   }
-}
-
-.sub-section {
-  flex: 1;
-  -webkit-flex: 1; /* Safari 6.1+ */
-  -ms-flex: 1; /* IE 10 */ 
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.security {
-  position: relative;
-
-  img {
-    width: 100%;
-  }
-
-  .description {
-    position: absolute;
-    top: 98px;
-
-    h3, p {
-      color: #fff;
+  // for a multi-column .split-section, set all columns as the same static height for centering.
+  // table-cel display (text) and background: cover (image) will increase div heights automatically if needed, to avoid overflow.
+  .text {
+    display: table;
+    padding: 20px 45px;
+    .inner {
+      display: table-cell;
+      vertical-align: middle;
+      p {
+        margin: 20px auto;
+      }
+      .btn-yellow {
+        margin-top: 15px;
+        margin-left: -10px;
+      }
     }
   }
 }
 
-.description {
-  padding: 0 $normalGutter;
-
-  h3{
-    color: $headerTextColor;
+.pour-some-trademark-on-me {
+  position: relative;
+  .trademark {
+    font-size: .35em;
+    position: absolute;
+    right: -17px;
+    top: 7px;
   }
+}
 
-  p {
-    margin: 22px 0;
-    font-size: $normalDescFontsize;
-    color: $subTextColor;
+.retirement {
+  .image {
+    background: no-repeat url("../img/retirement.jpg") right top;
+    background-size: cover;
+    height: $retirementHeight;
+  }
+  .text {
+    height: $retirementHeight;
+  }
+}
+
+.security {
+  background: no-repeat url("../img/security.jpg") top center;
+  background-size: cover;
+  margin: 0 -15px;
+  min-width: 100%;
+  .text {
+    background: transparent;
+    color: $white;
+    height: $securityHeight;
+    padding: 60px;
   }
 }
 
 .community {
-  display: -webkit-flex;
-  display: flex;
-
-  .sub-section {
-    background: $darkred;
-
-    h3, p {
-      color: $white;
-    }
+  background-color: $darkred;
+  .image {
+    background: no-repeat url("../img/community.jpg") center center;
+    background-size: cover;
+    height: $societyHeight;
+  }
+  .text {
+    background: transparent;
+    color: $white;
+    height: $societyHeight;
   }
 }
 
@@ -358,16 +373,8 @@ h3 {
   }
 }
 
-.section-image {
-  flex: 1;
-  -webkit-flex: 1; /* Safari 6.1+ */
-  -ms-flex: 1; /* IE 10 */ 
-  img {
-    width: 100%;
-  }
-}
 
-@media only screen and (max-width : $screen-md) {
+@media only screen and (max-width: $screen-md) {
   .nav-bar {
     padding: $mobileGutter;
   }
@@ -391,13 +398,6 @@ h3 {
   }
   h3 {
     font-size: $mobile-h3;
-  }
-  .description {
-    padding: 0 $mobileGutter;
-    p {
-      font-size: $mobileDescFontsize;
-      margin: 20px 0 40px;
-    }
   }
   .connect {
     padding: 50px 0;
@@ -447,7 +447,17 @@ h3 {
 }
 }
 
-@media only screen and (max-width : $screen-xs) {
+@media only screen and (max-width: $screen-sm) {
+  .split-section {
+    .text {
+      height: auto;
+    }
+  }
+  .security {
+    padding: 35px 15px;
+  }
+}
+@media only screen and (max-width: $screen-xs) {
   .header {
     background-position: center;
     .wrapper {
@@ -471,27 +481,6 @@ h3 {
         }
       }
     }
-  }
-  .community, .retirement {
-    display: initial;
-  }
-  .security {
-    display: inline-block;
-    img {
-      display: none;
-    }
-    background: url('../img/security.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    .description {
-      position: relative;
-      top: 0;
-    }
-  }
-  .description {
-    padding: $mobileGutter;
-    text-align: center;		
   }
   .connect {
     padding: 50px $mobileGutter;
