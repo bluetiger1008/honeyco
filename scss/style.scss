@@ -230,74 +230,6 @@ h3 {
   }
 }
 
-.gallery {
-  .wrapper{
-    padding: 25px 150px;
-    text-align: center;
-
-    h3 {
-      margin: 0 0 25px;
-      color: $headerTextColor;
-    }
-
-    p {
-      margin:25px 0;
-      color: $subTextColor;
-      font-size: $normalBodyFontsize;
-      .light {
-        color: $subTextLightColor;
-      }
-    }
-
-    .carousel {
-      .carousel-inner {
-        display: flex;
-        justify-content: center;
-        max-width: 400px;
-        width: auto;
-        height: auto;
-        margin: auto;
-
-        .item {
-
-         a img, img {
-            height: auto;
-            width: auto;
-            max-height:400px;
-          }
-        }
-
-      }
-
-      .carousel-control {
-        background: none;
-
-        img {
-          position: absolute;
-          top: 50%;
-          width: 55px;
-        }
-
-        &.left {
-          text-align: left;
-
-          img {
-            transform: translate(0, -50%);
-          }
-        }
-
-        &.right {
-          text-align: right;
-
-          img {
-            transform: translate(-100%, -50%);
-          }
-        }
-      }
-    }
-  }
-}
-
 .community {
   display: -webkit-flex;
   display: flex;
@@ -467,30 +399,6 @@ h3 {
       margin: 20px 0 40px;
     }
   }
-  .gallery {
-    .wrapper {
-      padding: 50px;
-      h3 {
-        margin-bottom: 30px;
-      }
-      p {
-        margin: 20px 0 40px;
-        font-size: $mobileBodyFontsize;
-      }
-      padding: $mobileGutter;
-      .carousel {
-        .carousel-control {
-          width: 10%;
-          img {
-            width: 70%;
-          }
-        }
-        .carousel-inner {
-          width: 80%;
-        }
-      }
-    }
-  }
   .connect {
     padding: 50px 0;
     p {
@@ -584,16 +492,6 @@ h3 {
   .description {
     padding: $mobileGutter;
     text-align: center;		
-  }
-  .gallery {
-    .wrapper {
-      h3 {
-        margin-bottom: 50px;
-      }
-      p {
-        margin: 20px 30px;
-      }
-    }
   }
   .connect {
     padding: 50px $mobileGutter;
