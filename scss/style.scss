@@ -2,7 +2,8 @@
 
 $bodyBackground: #e4e4e4;
 $white: #fff;
-$orange: #e9c046;
+$orange: #FFD34C;
+$cream: #FDFAD9;
 $darkred: #bf4931;
 $footerTextColor: #559897;
 $headerTextColor: #4d4d4d;
@@ -62,26 +63,55 @@ body {
   }
 }
 
-.mobileNavigator {
-  line-height: 47px;
-  color: white;
-  font-size: 30px;
-  text-align: right;
-  display: none;
-}
 
 a {
-  text-decoration: none !important;
+  color: $white;
   font-family: 'Montserrat';
   font-weight: lighter;
+  text-decoration: none !important;
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+  &:visited {
+    color: $white;
+  }
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   line-height: 1.2;
 }
 
-h3{
+h3 {
   font-size: $normal-h3;
+}
+
+.nav-bar {
+  border-radius: 0;
+  padding: 54px $normalGutter;
+  position: fixed;
+  transition: all 0.5s ease;
+  width: 100%;
+  z-index: 100;
+  .nav-logo {
+    margin-right: 4vw;
+    img {
+      height: 47px;
+    }
+    span {
+      color: $white;
+      font-size: 16px;
+    }
+  }
+}
+
+.navbar-scrolled {
+  background: rgba(70,160,160,0.9);
+  padding: 10px $normalGutter;
+  position: fixed;
+  transition: all 0.5s ease;
+  width: 100%;
+  z-index: 100;
 }
 
 .header {
@@ -98,12 +128,6 @@ h3{
     right: 0;
     display: block;
     position: absolute;
-  }
-
-  #banner {
-    vertical-align: top;
-    width: 100%;
-    opacity: 0;
   }
 
   .wrapper {
@@ -139,65 +163,6 @@ h3{
         }
       }
     }
-  }
-
-  .nav-bar {
-    display: inline-block;
-    transition: all 0.5s ease;
-    width: 100%;
-    position: fixed;
-    padding: 54px $normalGutter;
-    z-index: 100;
-    font-size: 18px;
-    .nav-logo {
-      display: inline-block;
-      span {
-        color: white;
-        font-size: 1.2em;
-      }
-      .logo {
-        height: 47px;
-      }
-    }
-    .nav-links {
-      float: right;
-      list-style: none;
-      line-height: 47px;
-
-      li {
-        display: inline;
-        padding: 0 10px;
-
-        a {
-          color: $white;
-          font-size: $normalBodyFontsize;
-        }
-
-        .nav-join {
-          color: $orange;
-          border: 2px solid $orange;
-          border-radius: 15px;
-          padding: 15px 20px;
-        }						
-      }
-    }
-    .menu-link {
-      display: inline-block;
-      float: right;
-    }
-  }
-
-
-  .navbar-fixed {
-    padding: 10px $normalGutter;
-    transition: all 0.5s ease;
-    z-index: 100;
-    background: rgba(70,160,160,0.9);
-    position: fixed;
-    width: 100%;
-  }
-
-  @media only screen and (max-width : $screen-lg) {
   }
 }
 
@@ -471,17 +436,11 @@ h3{
 }
 
 @media only screen and (max-width : $screen-md) {
-  .mobileNavigator {
-    display: block;
+  .nav-bar {
+    padding: $mobileGutter;
   }
   .header {
     background-size: auto 130%;
-    .nav-bar {
-      padding: $mobileGutter;
-      .nav-links {
-        display: none;
-      }
-    }
     .wrapper {
       .content {
         padding: 150px 0 80px;

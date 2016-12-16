@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <title>HoneyCo</title>
 
-  <!-- Bootstrap -->
+  <!-- Stylesheets -->
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="bower_components/swipebox/src/css/swipebox.css" rel="stylesheet">
@@ -39,42 +39,43 @@
   <!-- End Facebook Pixel Code -->
 </head>
 <body>
-<nav id="menu" class="panel" role="navigation">
+<div id="menu" class="panel" role="navigation">
   <ul class="nav-links">
-    <li><a href="#retirement" class="nav-link" data-scroll>About</a></li>
-    <li><a href="#security" class="nav-link" data-scroll>Your Home</a></li>
-    <li><a href="#gallery" class="nav-link" data-scroll>Technology</a></li>
-    <li><a href="#community" class="nav-link" data-scroll>Society</a></li>
-    <li><a href="#connect" class="nav-link" data-scroll>Join</a></li>
+    <li><a href="#retirement" class="big-slide-nav-link nav-link" data-scroll>About</a></li>
+    <li><a href="#security" class="big-slide-nav-link nav-link" data-scroll>Your Home</a></li>
+    <li><a href="#gallery" class="big-slide-nav-link nav-link" data-scroll>Technology</a></li>
+    <li><a href="#community" class="big-slide-nav-link nav-link" data-scroll>Society</a></li>
+    <li><a href="#connect" class="big-slide-nav-link nav-link" data-scroll>Join</a></li>
+    <hr>
+    <li><a href="https://portal.honeyco.com/login/?next=/" target="_blank" class="big-slide-nav-link nav-link">Log In</a></li>
   </ul>
-</nav>
+</div>
 <div class="content push">
-  <div class="header">
-    <div class="nav-bar">
-      <!-- <img class="logo" src="img/logo.svg"> -->
-      <div class="nav-logo">
-        <img class="logo" src="img/logo.svg">
-        <span>HoneyCo</span>
-        <span class="small"> Homes</span>
+  <nav class="nav-bar">
+    <a class="navbar-brand nav-logo">
+      <img src="img/logo.svg">
+      <span>HoneyCo</span><span class="hidden-sm-down"> Homes</span>    
+    </a>
+    <div class="nav navbar-nav nav-links">
+      <div class="navbar-text hidden-md-down">
+        <a href="#retirement" class="nav-item nav-link" data-scroll>About</a>
+        <a href="#security" class="nav-item nav-link" data-scroll>Your Home</a>
+        <a href="#gallery" class="nav-item nav-link" data-scroll>Technology</a>
+        <a href="#community" class="nav-item nav-link" data-scroll>Society</a>
+        <a href="#connect" class="nav-item nav-link" data-scroll>Join</a>
       </div>
-      <ul class="nav-links">
-        <li><a href="#retirement" class="nav-link" data-scroll>About</a></li>
-        <li><a href="#security" class="nav-link" data-scroll>Your Home</a></li>
-        <li><a href="#gallery" class="nav-link" data-scroll>Technology</a></li>
-        <li><a href="#community" class="nav-link" data-scroll>Society</a></li>
-        <li><a href="#connect" class="nav-link" data-scroll>Join</a></li>
-      </ul>
-      <a href="#menu" class="menu-link">
-        <div class="mobileNavigator">&#9776;</div>
-      </a>
+      <div class="navbar-text float-xs-right">
+        <a href="https://portal.honeyco.com/login/?next=/" target="_blank" class="nav-item nav-link hidden-sm-down">Log In</a>
+        <a href="#menu" class="nav-item nav-link hidden-lg-up mobile-menu-btn">Menu</a>
+      </div>
     </div>
-
+  </nav>
+  <div class="header">
     <div class="wrapper">
       <div class="content">
         <h1>Connected living for <br> a booming population.</h1>
         <h2>Powered by technology and community, <br> welcome to unRetirement.
         </h2>
-        <a href="#connect" class="btn-yellow" data-scroll>Discover</a>
         <a href="#retirement" id="down-arrow" data-scroll>
           <img src="img/down-arrow.png">
         </a>
@@ -206,28 +207,6 @@
 <script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
 <script src="js/bigslide.js"></script>
 <script src="js/script.js"></script>
-<script>
-  $(document).ready(function() {
-    $("#connectForm").submit(function(event) {
-      $("#connectSubmit").html('<i class="fa fa-spinner fa-spin fa-2x fa-fw"></i><span class="sr-only">Loading...</span>');
-      $("#connectSubmit").prop( "disabled", true );
-      var formData = $("#connectForm").serialize();
-      $.ajax({
-        type : 'POST', // HTTP method, always use POST for our form
-        url : 'https://visitor2.constantcontact.com/api/signup',
-        data : formData, // serialized form data
-        dataType : 'json', // the type of data we expect back from the server
-        success: function(data){
-          $("#connectForm").replaceWith("<p>Thank you for joining our mailing list!</p>");
-        },
-        error: function(response) {
-          $("#connectForm").replaceWith("<p>Something went wrong! Please try again later.</p>");
-        }
-      });
-      event.preventDefault();
-    });
-  });
-</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
