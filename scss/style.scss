@@ -2,9 +2,16 @@
 
 $bodyBackground: #e4e4e4;
 $white: #fff;
-$orange: #FFD34C;
+
+// HoneyCo Colors
+$yellow: #FFD34C;
+$orange: #DB9F33;
 $cream: #FDFAD9;
 $darkred: #bf4931;
+$bluegreen: #165d63;
+$grey: #5D5E5E;
+
+// Alternate colors
 $footerTextColor: #559897;
 $headerTextColor: #4d4d4d;
 $subTextColor: #4d4d4d;
@@ -12,10 +19,10 @@ $subTextLightColor: #4d4d4d;
 $copyrightBackColor: #f2f2f2;
 $copyrightTextColor: #808080;
 
-$screen-xs:	700px;
-$screen-sm:	768px;
-$screen-md:	992px;
-$screen-lg:	1200px;
+$screen-xs: 576px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
 
 $normalGutter: 90px;
 $mobileGutter: 30px;
@@ -33,14 +40,12 @@ $mobile-h3: 25px;
 $normalBtnFontsize: 14px;
 $mobileBtnFontsize: 12px;
 
-$retirementHeight: 97vh;
 $securityHeight: 97vh;
 $societyHeight: 97vh;
 
-
 body {
   background: $bodyBackground;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: .5px;
 }
 
@@ -68,10 +73,8 @@ body {
   }
 }
 
-
 a {
   color: $white;
-  font-family: 'Montserrat';
   font-weight: lighter;
   text-decoration: none !important;
   &:hover {
@@ -111,7 +114,7 @@ h3 {
 }
 
 .navbar-scrolled {
-  background: rgba(70,160,160,0.9);
+  background: rgba(70, 160, 160, 0.9);
   padding: 10px $normalGutter;
   position: fixed;
   transition: all 0.5s ease;
@@ -120,13 +123,13 @@ h3 {
 }
 
 .header {
-  background: no-repeat url('../img/banner.jpg');
   position: relative;
-  background-size: 100% 100%;
+  background-size: cover;
+  background: url('../img/banner.jpg') no-repeat center top;
 
   &:after {
     content: "";
-    background-color: rgba(16,135,133,0.75);
+    background-color: rgba(16, 135, 133, 0.75);
     top: 0;
     left: 0;
     bottom: 0;
@@ -180,22 +183,20 @@ h3 {
   border-radius: 20px;
   display: inline-block;
   text-transform: uppercase;
-  font-size: normalBtnFontsize;
+  font-size: $normalBtnFontsize;
   letter-spacing: 1px;
   font-weight: normal;
 }
-
 
 .split-section {
   color: $headerTextColor;
   .image {
     margin: 0;
+    background-size: cover;
   }
-  // for a multi-column .split-section, set all columns as the same static height for centering.
-  // table-cel display (text) and background: cover (image) will increase div heights automatically if needed, to avoid overflow.
   .text {
     display: table;
-    padding: 20px 45px;
+    padding: 10vh 45px;
     .inner {
       display: table-cell;
       vertical-align: middle;
@@ -210,51 +211,32 @@ h3 {
   }
 }
 
-.pour-some-trademark-on-me {
-  position: relative;
-  .trademark {
-    font-size: .35em;
-    position: absolute;
-    right: -17px;
-    top: 7px;
-  }
-}
-
 .retirement {
   .image {
-    background: no-repeat url("../img/retirement.jpg") right top;
-    background-size: cover;
-    height: $retirementHeight;
-  }
-  .text {
-    height: $retirementHeight;
+    background-image: url("../img/retirement.jpg");
+    background-position: right top;
   }
 }
 
 .security {
-  background: no-repeat url("../img/security.jpg") top center;
+  background: no-repeat url("../img/security.jpg") top left;
   background-size: cover;
   margin: 0 -15px;
   min-width: 100%;
   .text {
     background: transparent;
     color: $white;
-    height: $securityHeight;
-    padding: 60px;
   }
 }
 
 .community {
   background-color: $darkred;
   .image {
-    background: no-repeat url("../img/community.jpg") center center;
-    background-size: cover;
-    height: $societyHeight;
+    background-image: url("../img/community.jpg");
+    background-position: center center;
   }
   .text {
-    background: transparent;
     color: $white;
-    height: $societyHeight;
   }
 }
 
@@ -305,7 +287,7 @@ h3 {
         width: 75%;
         height: 60px;
         border-top-right-radius: 0;
-        border-bottom-right-radius: 0;	
+        border-bottom-right-radius: 0;
         text-align: left;
       }
     }
@@ -334,7 +316,7 @@ h3 {
   background: $white;
   position: relative;
 
-  .bg-logo {
+  .bg-logo-split {
     width: 117px;
     position: absolute;
     transform: translate(0, calc(-50%));
@@ -344,22 +326,19 @@ h3 {
   .wrapper {
     display: inline-block;
     width: 100%;
-    padding: 60px $normalGutter 50px;
+    padding: 60px 0 50px;
 
     ul {
       list-style: none;
       padding: 0;
-      //li {
-        //	display: inline-block;
-      //}
+      li {
+        padding-left: 1.28571429em;
+        text-indent: -1.28571429em;
+      }
       a {
         color: $footerTextColor;
         font-size: 15px;
         line-height: 2;
-
-        //i {
-          //	padding: 0 10px;
-        //}
       }
     }
   }
@@ -373,8 +352,8 @@ h3 {
   }
 }
 
-
 @media only screen and (max-width: $screen-md) {
+  // Before we hit $screen-md width, use the slideout navbar/Menu button
   .nav-bar {
     padding: $mobileGutter;
   }
@@ -396,11 +375,12 @@ h3 {
       }
     }
   }
+  // split section headers are a bit smaller for smaller screens
   h3 {
     font-size: $mobile-h3;
   }
+  // contact form needs to be tightened up on smaller screens
   .connect {
-    padding: 50px 0;
     p {
       margin: 20px 0 40px;
       font-size: $mobileBodyFontsize;
@@ -415,87 +395,63 @@ h3 {
       font-size: 12px;
     }
     :-ms-input-placeholder { /* IE 10+ */
-    font-size: 12px;
-  }
-  :-moz-placeholder { /* Firefox 18- */
-    font-size: 12px;
-  }
-  .input-group {
-    width: 400px;
-  }
-  .btn-lg {
-    font-size: 12px;
-    height: 40px !important;
-  }
-}
-.footer {
-  .bg-logo {
-    margin: 0 $mobileGutter;
-    width: 80px;
-  }
-  .wrapper {
-    padding: 60px 20px;
-    ul {
-      li {
-        display: block;
-      }
+      font-size: 12px;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      font-size: 12px;
+    }
+    .input-group {
+      width: 400px;
+    }
+    .btn-lg {
+      font-size: 12px;
+      height: 40px !important;
     }
   }
-}
-.btn-yellow {
-  font-size: $mobileBtnFontsize;
-}
 }
 
-@media only screen and (max-width: $screen-sm) {
-  .split-section {
-    .text {
-      height: auto;
-    }
-  }
-  .security {
-    padding: 35px 15px;
-  }
-}
 @media only screen and (max-width: $screen-xs) {
+  // header gets even smaller on smaller screens
   .header {
     background-position: center;
     .wrapper {
       padding: $mobileGutter;
-      position: relative;
       .content {
         padding: 100px 0 50px;
-        transform: initial;
-        br {
-          display: none;
-        }
-        h1 {
-          font-size: $ipadHeaderFontsize;
-        }
-        h2 {
-          margin-top: 25px;
-          font-size: $ipadBodyFontsize;
-        }
-        .btn-yellow {
-          margin: 30px;
-        }
       }
     }
   }
+  // contact form gets a bit smaller still
   .connect {
-    padding: 50px $mobileGutter;
     .input-group {
       width: 100%;
     }
     .btn-lg {
       padding: 5px;
     }
-
   }
+  // footer becomes 1 column at this screen size
   .footer {
+    .bg-logo-split {
+      left:0;
+      right: 0;
+      margin: 0 auto;
+    }
     .wrapper {
       text-align: center;
-      padding: 60px $mobileGutter;
+      padding: 90px $mobileGutter 60px;
     }
+  }
+}
+
+// when in two column display, we want equal row height
+@media only screen and (min-width: 768px) {
+  .row {
+    display: table;
+  }
+  .row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
   }
 }
