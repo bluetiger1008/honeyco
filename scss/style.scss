@@ -196,7 +196,7 @@ h3 {
   }
   .text {
     display: table;
-    padding: 10vh 45px;
+    padding: 20vh 45px;
     .inner {
       display: table-cell;
       vertical-align: middle;
@@ -226,6 +226,13 @@ h3 {
   .text {
     background: transparent;
     color: $white;
+  }
+}
+
+.gallery {
+  .technology {
+    width: 100%;
+    min-height: 20vh;
   }
 }
 
@@ -379,6 +386,11 @@ h3 {
   h3 {
     font-size: $mobile-h3;
   }
+  .split-section {
+    .text {
+      padding: 10vh 45px;
+    }
+  }
   // contact form needs to be tightened up on smaller screens
   .connect {
     p {
@@ -420,6 +432,9 @@ h3 {
         padding: 100px 0 50px;
       }
     }
+  }
+  .technology {
+    display: none;
   }
   // contact form gets a bit smaller still
   .connect {
