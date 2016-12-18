@@ -42,6 +42,7 @@ $normalBtnFontsize: 14px;
 $mobileBtnFontsize: 12px;
 
 $securityHeight: 97vh;
+$packagesHeight: 97vh;
 $societyHeight: 97vh;
 
 body {
@@ -260,6 +261,21 @@ h3 {
   }
 }
 
+.packages {
+  .text {
+    height: $packagesHeight;
+  }
+}
+
+.shadow-card {
+  background: $white;
+  box-shadow: 0 0 30px rgba(0,0,0,.2);
+  padding: 20px 35px;
+  h5 {
+    line-height: 1.4;
+  }
+}
+
 .community {
   background-color: $darkred;
   .image {
@@ -460,6 +476,10 @@ h3 {
   .technology-image {
     display: none;
   }
+
+   .packages {
+    margin-top: 15px;
+  }
   // contact form gets a bit smaller still
   .connect {
     .input-group {
@@ -467,6 +487,13 @@ h3 {
     }
     .btn-lg {
       padding: 5px;
+    }
+  }
+
+  .shadow-card {
+    padding: 20px 15px;
+    h5, p {
+      font-size: 18px;
     }
   }
   // footer becomes 1 column at this screen size
