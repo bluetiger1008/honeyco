@@ -84,6 +84,12 @@ a {
   &:visited {
     color: $white;
   }
+  &:active {
+    color: $white;
+  }
+  &:focus {
+    color: $white;
+  }
 }
 
 h1, h2, h3, h4 {
