@@ -33,9 +33,13 @@
             }
         });
 
-        var bigSlideAPI = ($('.mobile-menu-btn').bigSlide()).bigSlideAPI;
+        var bigSlideAPI = $('.mobile-menu-btn').bigSlide().bigSlideAPI;
 
-        $('.big-slide-nav-link').on('click', 'touchstart', function() {
+        var $bigSlideNavLink = $('.big-slide-nav-link');
+        $bigSlideNavLink.on('click', function() {
+            bigSlideAPI.view.toggleClose();
+        });
+        $bigSlideNavLink.on('touchstart', function() {
             bigSlideAPI.view.toggleClose();
         });
        
