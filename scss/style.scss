@@ -9,6 +9,7 @@ $orange: #DB9F33;
 $cream: #FDFAD9;
 $darkred: #bf4931;
 $bluegreen: #165d63;
+$blue: #4DA29F;
 $grey: #5D5E5E;
 
 // Alternate colors
@@ -204,7 +205,7 @@ h3 {
     display: table;
     padding: 20vh 45px;
     .inner {
-      display: table-cell;
+
       vertical-align: middle;
       p {
         margin: 20px auto;
@@ -235,10 +236,27 @@ h3 {
   }
 }
 
-.gallery {
-  .technology {
-    width: 100%;
+.technology {
+  margin: 0 -15px;
+  min-width: 100vw;
+  background-color: $blue;
+  .text {
+    padding: 10vh 45px;
+    color: $white;
+  }
+
+}
+
+.technology-image {
+  min-width: 100vw;
+  div {
+    padding: 0;
+  }
+  img {
+    width: 100vw;
     min-height: 20vh;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -439,7 +457,7 @@ h3 {
       }
     }
   }
-  .technology {
+  .technology-image {
     display: none;
   }
   // contact form gets a bit smaller still
