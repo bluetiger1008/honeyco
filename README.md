@@ -1,7 +1,8 @@
-# honeyco
+# HoneyCo Homes Website
 
-# Deploy
-bower install
+# How to build/install
+npm install
 
-# Saas watch
-gulp
+./node_modules/bower/bin/bower install
+
+npm run compile-css

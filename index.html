@@ -5,9 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <title>HoneyCo</title>
 
-  <!-- Bootstrap -->
+  <!-- Stylesheets -->
+  <link href="bower_components/tether/dist/css/tether.min.css" rel="stylesheet">
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="bower_components/swipebox/src/css/swipebox.css" rel="stylesheet">
@@ -19,135 +22,187 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '656299651240605'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id=656299651240605&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- DO NOT MODIFY -->
+  <!-- End Facebook Pixel Code -->
 </head>
 <body>
-<nav id="menu" class="panel" role="navigation">
+<div id="menu" class="panel" role="navigation">
   <ul class="nav-links">
-    <li><a href="#retirement" class="nav-link">About</a></li>
-    <li><a href="#security" class="nav-link">Your Home</a></li>
-    <li><a href="#gallery" class="nav-link">Technology</a></li>
-    <li><a href="#community" class="nav-link">Community</a></li>
-    <li><a href="#connect" class="nav-link">Join</a></li>
+    <li><a href="#retirement" class="big-slide-nav-link nav-link" data-scroll>About</a></li>
+    <li><a href="#security" class="big-slide-nav-link nav-link" data-scroll>Your Home</a></li>
+    <li><a href="#technology" class="big-slide-nav-link nav-link" data-scroll>Technology</a></li>
+    <li><a href="#community" class="big-slide-nav-link nav-link" data-scroll>Society</a></li>
+    <li><a href="#connect" class="big-slide-nav-link nav-link" data-scroll>Join</a></li>
+    <hr>
+    <li><a href="https://portal.honeyco.com/login/?next=/" target="_blank" class="big-slide-nav-link nav-link">Log In</a></li>
   </ul>
-</nav>
+</div>
 <div class="content push">
-  <div class="header">
-    <div class="nav-bar">
-      <!-- <img class="logo" src="img/logo.svg"> -->
-      <div class="nav-logo">
-        <img class="logo" src="img/logo.svg">
-        <span>HoneyCo</span>
-        <span class="small"> Homes</span>
+  <nav class="nav-bar">
+    <a class="navbar-brand nav-logo">
+      <img src="img/logo.svg">
+      <span>HoneyCo</span><span class="hidden-sm-down"> Homes</span>
+    </a>
+    <div class="nav navbar-nav nav-links">
+      <div class="navbar-text hidden-md-down">
+        <a href="#retirement" class="nav-item nav-link" data-scroll>About</a>
+        <a href="#security" class="nav-item nav-link" data-scroll>Your Home</a>
+        <a href="#technology" class="nav-item nav-link" data-scroll>Technology</a>
+        <a href="#community" class="nav-item nav-link" data-scroll>Society</a>
+        <a href="#connect" class="nav-item nav-link" data-scroll>Join</a>
       </div>
-      <ul class="nav-links">
-        <li><a href="#retirement" class="nav-link">About</a></li>
-        <li><a href="#security" class="nav-link">Your Home</a></li>
-        <li><a href="#gallery" class="nav-link">Technology</a></li>
-        <li><a href="#community" class="nav-link">Community</a></li>
-        <li><a href="#connect" class="nav-link">Join</a></li>
-      </ul>
-      <a href="#menu" class="menu-link">
-        <div class="mobileNavigator">&#9776;</div>
-      </a>
+      <div class="navbar-text float-xs-right">
+        <a href="https://portal.honeyco.com/login/?next=/" target="_blank" class="nav-item nav-link hidden-sm-down">Log In</a>
+        <a href="#menu" class="nav-item nav-link hidden-lg-up mobile-menu-btn">Menu</a>
+      </div>
     </div>
-
+  </nav>
+  <div class="header">
     <div class="wrapper">
       <div class="content">
         <h1>Connected living for <br> a booming population.</h1>
-        <h2>Powered by technology and community, <br> welcome to the new retirement. <br> This is living on your terms
+        <h2>Powered by technology and community, <br> welcome to unRetirement.
         </h2>
-        <a href="#connect" class="btn-yellow">Discover</a>
-        <a href="#retirement" id="down-arrow">
+        <a href="#retirement" id="down-arrow" data-scroll>
           <img src="img/down-arrow.png">
         </a>
       </div>
     </div>
   </div>
 
-  <div id="retirement" class="retirement">
-    <div class="section-image">
-      <img src="img/retirement.jpg">
-    </div>
-    <div class="sub-section">
-      <div class="description">
-        <h3>A better residential <br> retirement model.</h3>
-        <p>HoneyCo Homes is rethinking the traditional retirement living model. By harnessing the lastest in technology
-          and engaging with the community, you now have access to the world's first distributed retirement
-          community.</p>
-        <a class="swipebox-video btn-yellow btn-watch">Watch Video</a>
+  <div class="container-fluid">
+
+    <div id="retirement" class="row split-section retirement">
+      <div class="col-sm-12 col-md-6 image">
+      </div>
+      <div class="col-xs-12 col-sm-10 offset-sm-1 col-md-6 offset-md-0 text-xs-center text-md-left text">
+        <div class="inner">
+          <h3>Rent a home,</h3>
+          <h3>not a hallway</h3>
+          <p>HoneyCo rental homes are located in multigenerational neighborhoods. These homes offer the resident a
+            maintenance-free lifestyle, supported by smart home technology and connected to community. Make the most of
+            your unRetirement in a HoneyCo Home.</p>
+          <a class="btn-yellow" href="#connect" data-scroll>Learn More</a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div id="security" class="security">
-    <img src="img/security.jpg">
-    <div class="description col-xs-12 col-sm-6">
-      <h3>Security and safety. <br> In your home.</h3>
-      <p>Whether it's where you raised your kids or a new adventure entirely, enjoy your home on your terms. Affordable
-        and accessible options.</p>
-      <a href="#connect" class="btn-yellow">Learn More</a>
-    </div>
-  </div>
-
-  <div id="gallery" class="gallery">
-    <div class="wrapper">
-      <h3>A smart home, at your fingertips.</h3>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img src="img/gallery.png">
+    <div id="security" class="row split-section security">
+      <div class="col-xs-12 col-sm-9 col-md-6 text">
+        <div class="inner text-xs-center text-sm-left">
+          <h3>The Internet of caring things&trade;</h3>
+          <p>Technological obsolescence is obsolete. HoneyCo has built the universal connector of smart home features. We do
+            the research and the integration of the hardware so you don't have to. And when something better comes out,
+            we'll make sure it works for you.</p>
+          <a href="#connect" class="btn-yellow" data-scroll>Learn More</a>
           </div>
-          <div class="item">
-            <img src="img/gallery.png">
+      </div>
+    </div>
+
+    <div id="technology" class="row split-section technology" >
+      <div class="col-xs-12 text">
+        <div class="inner text-xs-center text-sm-center">
+          <h3>A smart home, at your fingertips</h3>
+          <p>Can't remember if you turned off the stove? Is the door locked?
+            No worries. With a HoneyCo Home, peace of mind is always at hand.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="row technology-image">
+      <div class="col-xs-12">
+        <img src="img/technology.png">
+      </div>
+    </div>
+
+    <div id="carePackages" class="row split-section packages">
+      <div class="col-xs-12 col-sm-10 offset-sm-1 col-md-6 offset-md-0 col-lg-5 offset-lg 1 text-xs-center text-md-left text">
+        <div class="inner">
+          <h3>HoneyCo Care Packages</h3>
+          <p>Coloring book put a bird on it tote bag, bespoke schlitz trust fund raw denim plaid hell of sartorial polaroid. Poutine brooklyn heirloom drinking vinegar hammock master cleanse. Celiac occupy offal deep v, keytar helvetica leggings tumblr semiotics master cleanse readymade chia fam. </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-5 text">
+        <div class="inner">
+          <div class="shadow-card">
+            <h5>"Tilde wolf locavore, keytar la croix edison bulb chia sartorial health goth raclette intelligentsia pug."</h5>
+            <p>Jane Doe
+            <br>
+            Adult Caregiver
+            </p>
           </div>
         </div>
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <img src="img/left-arrow.png">
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <img src="img/right-arrow.png">
-        </a>
       </div>
-      <p>Can't remember if you turned off the stove? Is the door locked? <br>
-        <span class="light">No worries. With a HoneyCo Home, peace of mind is always at hand.</span></p>
-      <a href="#connect" class="btn-yellow btn-cta">Learn More</a>
     </div>
-  </div>
 
-  <div id="community" class="community">
-    <div class="sub-section">
-      <div class="description">
-        <h3>A grassroots community at your doorstep.</h3>
-        <p>Your in-person community ambassador will help keep you connected with the people, events and opportunities
-          around you.</p>
-        <a href="#connect" class="btn-yellow">Learn More</a>
+    <div id="community" class="row split-section community">
+      <div class="col-xs-12 col-sm-10 offset-sm-1 col-md-6 offset-md-0 text-xs-center text-md-left text">
+        <div class="inner">
+          <h3>unRetire</h3>
+          <p>Introducing <strong>HoneyCo Society</strong>: a unique human and online network of multi-generational members. Inspired by
+            volunteerism, continuing education, and wellness, the HoneyCo Society puts avenues of social engagement within
+            reach of any resident.
+            <br /><br />
+            Each resident selects a dedicated HoneyCo Ambassador. The HoneyCo Ambassador is your in-person, real-life
+            problem solver, activity coordinator, social connector, and expert listener.
+            <br /><br />
+            HoneyCo Society @Home is the digital counterpart to your HoneyCo Ambassador. Browse local and curated
+            activities online or message a friend.</p>
+          <a href="#connect" class="btn-yellow" data-scroll>Learn More</a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6 image">
       </div>
     </div>
-    <div class="section-image">
-      <img src="img/community.jpg">
-    </div>
-  </div>
 
-  <div id="connect" class="connect">
-    <h4>Get Connected. Stay Connected.</h4>
-    <p>Sign up to receive updates from HoneyCo and apply for early access</p>
-    <form action="#">
-      <div class="input-group">
-        <input class="btn btn-lg" name="email" id="email" type="email" placeholder="Enter your email for updates"
-               required>
-        <button class="btn btn-lg" type="submit">Submit</button>
-      </div>
-    </form>
+    <div id="connect" class="connect">
+      <h4>Get Connected. Stay Connected.</h4>
+      <p>Sign up to receive updates from HoneyCo and apply for early access</p>
+      <form id="connectForm" action="https://visitor2.constantcontact.com/api/signup" method="post">
+        <input type="hidden" name="ca" value="a7bd0f16-f28a-423e-a677-65119172bbe7" />
+        <input type="hidden" name="list" value="1049878716" />
+        <div class="input-group">
+          <input class="btn btn-lg" name="email" id="email" type="email" placeholder="Enter your email for updates"
+                 required>
+          <button id="connectSubmit" class="btn btn-lg" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
   </div>
 
   <div class="footer">
-    <img class="bg-logo" src="img/bg-logo.png">
+    <img class="bg-logo-split" src="img/bg-logo.png">
     <div class="wrapper">
-      <div class="col-xs-offset-5 col-xs-7 col-sm-offset-8 col-sm-4">
+
+      <div class="offset-sm-4 col-xs-12 col-sm-4">
         <ul>
-          <li><a href=""><i class="fa fa-facebook-official"></i>Facebook</a></li>
-          <li><a href=""><i class="fa fa-instagram"></i>Instagram</a></li>
-          <li><a href=""><i class="fa fa-twitter"></i>Twitter</a></li>
+          <li><i class="fa fa-fw fa-phone"></i>(615) 266-5243</li>
+          <li><i class="fa fa-fw fa-home"></i>331 54th Ave N. <br/> Nashville, TN 37209</li>
+          <li><i class="fa fa-fw fa-envelope"></i><a href="mailto:info@honeyco.com">info@honeyco.com</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <ul>
+          <li><a href="https://www.facebook.com/honeycohomes"><i class="fa fa-fw fa-facebook-official"></i>&nbsp;Facebook</a></li>
+          <li><a href="https://twitter.com/honeycohomes"><i class="fa fa-fw fa-twitter"></i>&nbsp;Twitter</a></li>
+          <li><a href="https://angel.co/honeyco-homes"><i class="fa fa-fw fa-angellist"></i>&nbsp;AngelList</a></li>
         </ul>
       </div>
     </div>
@@ -155,13 +210,26 @@
       <p>© 2016 HoneyCo Homes, All rights reserved.</p>
     </div>
   </div>
+
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bower_components/tether/dist/js/tether.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/swipebox/src/js/jquery.swipebox.min.js"></script>
 <script src="js/bigslide.js"></script>
 <script src="js/script.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-84564290-1', 'auto');
+  ga('require', 'linkid');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
